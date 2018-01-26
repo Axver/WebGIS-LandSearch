@@ -37,21 +37,17 @@ else
   <script type="text/javascript" src="../js/main.js"></script>
   <script src="../fw_leaflet/leaflet-src.js"></script>
   <link rel="stylesheet" href="../fw_leaflet/leaflet.css"/>
-
   <script src="../plugin_draw/src/Leaflet.draw.js"></script>
   <script src="../plugin_draw/src/Leaflet.Draw.Event.js"></script>
   <link rel="stylesheet" href="../plugin_draw/src/leaflet.draw.css"/>
-
   <script src="../plugin_draw/src/Toolbar.js"></script>
   <script src="../plugin_draw/src/Tooltip.js"></script>
-
   <script src="../plugin_draw/src/ext/GeometryUtil.js"></script>
   <script src="../plugin_draw/src/ext/LatLngUtil.js"></script>
   <script src="../plugin_draw/src/ext/LineUtil.Intersect.js"></script>
   <script src="../plugin_draw/src/ext/Polygon.Intersect.js"></script>
   <script src="../plugin_draw/src/ext/Polyline.Intersect.js"></script>
   <script src="../plugin_draw/src/ext/TouchEvents.js"></script>
-
   <script src="../plugin_draw/src/draw/DrawToolbar.js"></script>
   <script src="../plugin_draw/src/draw/handler/Draw.Feature.js"></script>
   <script src="../plugin_draw/src/draw/handler/Draw.SimpleShape.js"></script>
@@ -61,14 +57,10 @@ else
   <script src="../plugin_draw/src/draw/handler/Draw.CircleMarker.js"></script>
   <script src="../plugin_draw/src/draw/handler/Draw.Polygon.js"></script>
   <script src="../plugin_draw/src/draw/handler/Draw.Rectangle.js"></script>
-
-
   <script src="../plugin_draw/src//edit/EditToolbar.js"></script>
   <script src="../plugin_draw/src/edit/handler/EditToolbar.Edit.js"></script>
   <script src="../plugin_draw/src/edit/handler/EditToolbar.Delete.js"></script>
-
   <script src="../plugin_draw/src/Control.Draw.js"></script>
-
   <script src="../plugin_draw/src/edit/handler/Edit.Poly.js"></script>
   <script src="../plugin_draw/src/edit/handler/Edit.SimpleShape.js"></script>
   <script src="../plugin_draw/src/edit/handler/Edit.Rectangle.js"></script>
@@ -116,7 +108,7 @@ else
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#" onclick="verifikasi_user()">Bidding</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_bidding/pencari">Bidding</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Log Out</a>
@@ -181,6 +173,25 @@ else
 
              <div class="panel-body">
                 <div id="booking" style="background-color:#18BC9C; height: 600px;">
+
+                  <div id="element_1">
+
+                  </div>
+
+                  <div id="element_2">
+                  </div>
+
+                  <div id="element_3">
+                  </div>
+
+                  <div id="element_4">
+                  </div>
+
+                  <div id="element_5">
+                  </div>
+
+                  <div id="element_6">
+                  </div>
              </div>
 
            </div>
@@ -211,20 +222,20 @@ else
                   attribution: 'google'
               })
           }, { 'drawlayer': drawnItems }, { position: 'topleft', collapsed: false }).addTo(map);
-          map.addControl(new L.Control.Draw({
-              edit: {
-                  featureGroup: drawnItems,
-                  poly: {
-                      allowIntersection: false
-                  }
-              },
-              draw: {
-                  polygon: {
-                      allowIntersection: false,
-                      showArea: true
-                  }
-              }
-          }));
+          // map.addControl(new L.Control.Draw({
+          //     edit: {
+          //         featureGroup: drawnItems,
+          //         poly: {
+          //             allowIntersection: false
+          //         }
+          //     },
+          //     draw: {
+          //         polygon: {
+          //             allowIntersection: false,
+          //             showArea: true
+          //         }
+          //     }
+          // }));
 
           map.on(L.Draw.Event.CREATED, function (event) {
               var layer = event.layer;
@@ -284,7 +295,7 @@ else
                   poli.setStyle({fillColor: '#000000'});
                   poli.setStyle({fillOpacity: 0.5});
                   poli.setStyle({color: 'none'});
-                  poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
+                  poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info' onclick='infolahan()'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
 
 
               }
@@ -345,12 +356,28 @@ else
         }
       }
 
+      //Fungsi untuk membooking dengan data dummies
+
       function booking()
       {
 
       console.log("Button Booking di tekan");
-      alert("Button Booking Ditekan!!!");
+      // alert("Button Booking Ditekan!!!");
+      document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
+      document.getElementById("element_2").innerHTML="<div class='container'><table class='table'><thead><tr><th>Info</th><th>Detil</th></tr></thead><tbody><tr><td>Luas</td><td>10000 m2</td></tr><tr><td>Harga</td><td>1.000.000.000</td></tr><tr><td>July</td><td>Dooley</td></tr></tbody></table></div>";
+      document.getElementById("element_3").innerHTML="Dijual Oleh : Jesi Namora (Pemilik)";
+      document.getElementById("element_4").innerHTML="Lelang? Ya!";
+      document.getElementById("element_5").innerHTML="<button class='btn btn-info'> Booking </button>";
 
+      }
+
+      function infolahan()
+      {
+        document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
+        document.getElementById("element_2").innerHTML="<h3>Booking Tanah</h3>";
+        document.getElementById("element_3").innerHTML="<h3>Booking Tanah</h3>";
+        document.getElementById("element_4").innerHTML="<h3>Booking Tanah</h3>";
+        document.getElementById("element_5").innerHTML="<h3>Booking Tanah</h3>";
       }
 
       </script>

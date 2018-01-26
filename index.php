@@ -85,7 +85,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="fw_bootstrap/img/portfolio/cake.png" alt="">
+              <img class="img-fluid" src="fw_bootstrap/img/portfolio/bid.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -95,7 +95,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="fw_bootstrap/img/portfolio/circus.png" alt="">
+              <img class="img-fluid" src="fw_bootstrap/img/portfolio/message.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -297,9 +297,9 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <h2 class="text-secondary text-uppercase mb-0">Test Perubahannya</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="fw_bootstrap/img/portfolio/cake.png" alt="">
+              <img class="img-fluid mb-5" src="fw_bootstrap/img/portfolio/bid.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
@@ -321,7 +321,7 @@
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="fw_bootstrap/img/portfolio/circus.png" alt="">
+              <img class="img-fluid mb-5" src="fw_bootstrap/img/portfolio/message.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
