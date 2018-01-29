@@ -68,6 +68,7 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
+<<<<<<< HEAD
           <script type="text/javascript" src="jquery/jquery.js"></script>
           <script type="text/javascript" src="jquery/jquery-ui.js"></script>
           <script type="text/javascript" src="js/main.js"></script>
@@ -111,13 +112,62 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
           <script src="plugin_draw/src/edit/handler/Edit.Marker.js"></script>
           <script src="plugin_draw/src/edit/handler/Edit.CircleMarker.js"></script>
           <script src="plugin_draw/src/edit/handler/Edit.Circle.js"></script>
+=======
+          <script type="text/javascript" src="../jquery/jquery.js"></script>
+          <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
+          <script type="text/javascript" src="../js/main.js"></script>
+          <script src="../fw_leaflet/leaflet-src.js"></script>
+          <link rel="stylesheet" href="../fw_leaflet/leaflet.css"/>
+
+          <script src="../plugin_draw/src/Leaflet.draw.js"></script>
+          <script src="../plugin_draw/src/Leaflet.Draw.Event.js"></script>
+          <link rel="stylesheet" href="../plugin_draw/src/leaflet.draw.css"/>
+
+          <script src="../plugin_draw/src/Toolbar.js"></script>
+          <script src="../plugin_draw/src/Tooltip.js"></script>
+
+          <script src="../plugin_draw/src/ext/GeometryUtil.js"></script>
+          <script src="../plugin_draw/src/ext/LatLngUtil.js"></script>
+          <script src="../plugin_draw/src/ext/LineUtil.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/Polygon.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/Polyline.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/TouchEvents.js"></script>
+
+          <script src="../plugin_draw/src/draw/DrawToolbar.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Feature.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.SimpleShape.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Polyline.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Marker.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Circle.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.CircleMarker.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Polygon.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Rectangle.js"></script>
+
+
+          <script src="../plugin_draw/src//edit/EditToolbar.js"></script>
+          <script src="../plugin_draw/src/edit/handler/EditToolbar.Edit.js"></script>
+          <script src="../plugin_draw/src/edit/handler/EditToolbar.Delete.js"></script>
+
+          <script src="../plugin_draw/src/Control.Draw.js"></script>
+
+          <script src="../plugin_draw/src/edit/handler/Edit.Poly.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.SimpleShape.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Rectangle.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Marker.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.CircleMarker.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Circle.js"></script>
+>>>>>>> 7dba8b83ec08d89fc0d7d3063128b2ef692045c4
 
 
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta name="description" content="">
           <meta name="author" content="">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 7dba8b83ec08d89fc0d7d3063128b2ef692045c4
           <select id="filterdata" onchange="filter()">
              <option>
               Kepadatan Penduduk
@@ -167,7 +217,11 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
              </div>
              </div>
           </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 7dba8b83ec08d89fc0d7d3063128b2ef692045c4
       <script>
      function refresh(){
       document.location.reload();
@@ -246,7 +300,11 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
                       poli.setStyle({fillColor: '#000000'});
                       poli.setStyle({fillOpacity: 0.5});
                       poli.setStyle({color: 'none'});
+<<<<<<< HEAD
                       poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
+=======
+                      poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
+>>>>>>> 7dba8b83ec08d89fc0d7d3063128b2ef692045c4
                   }
                   else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
                   {
@@ -266,7 +324,11 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
                               poli.setStyle({fillColor: '#FF0000'});
                               poli.setStyle({fillOpacity: 0.5});
                               poli.setStyle({color: 'none'});
+<<<<<<< HEAD
                               poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
+=======
+                              poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
+>>>>>>> 7dba8b83ec08d89fc0d7d3063128b2ef692045c4
                             }
                             else{
                             }
@@ -282,7 +344,11 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
             // console.log(roleuser);
             if (roleuser=='bpn'){
               console.log('hai ini testing');
+<<<<<<< HEAD
               window.location='pg_bidding/pencari/index.php';
+=======
+              window.location='../pg_bidding/pencari/index.php';
+>>>>>>> 7dba8b83ec08d89fc0d7d3063128b2ef692045c4
             }
           }
           function booking(){
