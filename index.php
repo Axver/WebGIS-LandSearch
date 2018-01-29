@@ -208,6 +208,45 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
 
                  <div class="panel-body">
                     <div id="booking" style="background-color:#18BC9C; height: 600px;">
+
+                      <div class="col-sm-4">
+                        <div class="panel panel-info" style="width:300px;height:400px;background-color:#4DD0E1; position:center;">
+                           <div class="panel-head">
+                           <h2 class="text-secondary text-uppercase mb-0">Login Page</h2>
+                           </div>
+
+                           <div class="panel-body" style="margin-top:50px;">
+                             <form class="" action="sy_proses/pr_login.php" method="post">
+                               <div class="row">
+                                 <div class="col-sm-4">
+                                     <label for="username">Username</label>
+                                 </div>
+                                 <div class="col-sm-6">
+                                   <input type="text" name="username">
+                                 </div>
+
+                               </div>
+
+                               <div class="row">
+
+                                 <div class="col-sm-4">
+                                   <label for="password">Password</label>
+                                 </div>
+                                 <div class="col-sm-6">
+                                   <input type="text" name="password">
+                                 </div>
+
+                               </div>
+
+                               <input type="submit" class="btn btn-primary" name="Login" value="LOGIN">
+                             </form>
+
+                             <br/>
+                             <p>Lupa Password? Klik Disini</p>
+                           </div>
+                        </div>
+
+                      </div>
                  </div>
                </div>
              </div>
