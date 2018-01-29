@@ -65,28 +65,228 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="fw_bootstrap/img/portfolio/menu_maps.png" alt="">
-            </a>
+          <script type="text/javascript" src="../jquery/jquery.js"></script>
+          <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
+          <script type="text/javascript" src="../js/main.js"></script>
+          <script src="../fw_leaflet/leaflet-src.js"></script>
+          <link rel="stylesheet" href="../fw_leaflet/leaflet.css"/>
+
+          <script src="../plugin_draw/src/Leaflet.draw.js"></script>
+          <script src="../plugin_draw/src/Leaflet.Draw.Event.js"></script>
+          <link rel="stylesheet" href="../plugin_draw/src/leaflet.draw.css"/>
+
+          <script src="../plugin_draw/src/Toolbar.js"></script>
+          <script src="../plugin_draw/src/Tooltip.js"></script>
+
+          <script src="../plugin_draw/src/ext/GeometryUtil.js"></script>
+          <script src="../plugin_draw/src/ext/LatLngUtil.js"></script>
+          <script src="../plugin_draw/src/ext/LineUtil.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/Polygon.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/Polyline.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/TouchEvents.js"></script>
+
+          <script src="../plugin_draw/src/draw/DrawToolbar.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Feature.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.SimpleShape.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Polyline.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Marker.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Circle.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.CircleMarker.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Polygon.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Rectangle.js"></script>
+
+
+          <script src="../plugin_draw/src//edit/EditToolbar.js"></script>
+          <script src="../plugin_draw/src/edit/handler/EditToolbar.Edit.js"></script>
+          <script src="../plugin_draw/src/edit/handler/EditToolbar.Delete.js"></script>
+
+          <script src="../plugin_draw/src/Control.Draw.js"></script>
+
+          <script src="../plugin_draw/src/edit/handler/Edit.Poly.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.SimpleShape.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Rectangle.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Marker.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.CircleMarker.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Circle.js"></script>
+
+
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <meta name="description" content="">
+          <meta name="author" content="">
+        
+          <select id="filterdata" onchange="filter()">
+             <option>
+              Kepadatan Penduduk
+             </option>
+             <option>
+              Curah Hujan
+             </option>
+
+             <option>
+              Dataran rendah
+             </option>
+
+             <option>
+              Dataran Tinggi
+             </option>
+          </select>
+          <button  type="button" class="btn btn-success" name="button" onclick="refresh()"> Refresh  </button>
+          <button type="button" class="btn btn-info" name="button" onclick="tampildigitasi()"> Luas (m2)</button>
+          <select>
+             <option>
+              <=5000
+             </option>
+             <option>
+              5001-10000
+             </option>
+             10001-20000
+             <option>
+              20000-40000
+             </option>
+
+             <option>
+              >40000
+             </option>
+          </select>
+          <div class="row">
+             <div class="col-sm-8">
+               <div id="map" style="width: 750px; height: 600px; border: 1px solid #ccc"></div>
+             </div>
+             <div class="col-sm-4">
+
+               <div class="panel panel-info">
+
+                 <div class="panel-body">
+                    <div id="booking" style="background-color:#18BC9C; height: 600px;">
+                 </div>
+               </div>
+             </div>
+             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="fw_bootstrap/img/portfolio/bid.png" alt="">
-            </a>
-          </div>
-        </div>
+        
+      <script>
+     function refresh(){
+      document.location.reload();
+     }
+      </script>
+
+          <script>
+              var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                      osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                      osm = L.tileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib }),
+                      map = new L.Map('map', { center: new L.LatLng(-6.282250, 106.801443), zoom: 13 }),
+                      drawnItems = L.featureGroup().addTo(map);
+              L.control.layers({
+                  'osm': osm.addTo(map),
+                  "google": L.tileLayer('http://www.google.com/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
+                      attribution: 'google'
+                  })
+              }, { 'drawlayer': drawnItems }, { position: 'topleft', collapsed: false }).addTo(map);
+              map.addControl(new L.Control.Draw({
+                  edit: {
+                      featureGroup: drawnItems,
+                      poly: {
+                          allowIntersection: false
+                      }
+                  },
+                  draw: {
+                      polygon: {
+                          allowIntersection: false,
+                          showArea: true
+                      }
+                  }
+              }));
+              map.on(L.Draw.Event.CREATED, function (event) {
+                  var layer = event.layer;
+                  drawnItems.addLayer(layer);
+                  //Mengambil Data geometri Hasil Gambar
+                  var datagambar = drawnItems.toGeoJSON();
+                  //Convert ke geojson
+                  convertedData = JSON.stringify(datagambar.features);
+                  var length= convertedData.length;
+                  var substr = convertedData.substr(80,length);
+                  var hapus_belakang=substr.slice(0,-5);
+                  // var replace=hapus_belakang.replace('],[','"')
+                  var res = hapus_belakang.replace(/],/gi, '"');
+                  var res1 = res.replace(/,/gi, ' ');
+                  var res2 = res1.replace(/]/gi, ' ');
+                  var res3= res2.replace(/\[/g,'');
+                  res4=res3.replace(/"/g,',');
+                  document.getElementById("geometry").value=res4;
+                  // console.log(hapus_belakang);
+                  console.log(res4);
+              });
+          </script>
+
+
+          <script>
+          function passing_php()
+          {
+            var sertipikat=document.getElementById("id").value;
+            window.location.href = "http://localhost/magang_1/sy_proses/pr_inputbpn.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
+          }
+          </script>
+          <!-- Script untuk Filter Lahan -->
+          <script>
+          function filter()
+          {  ubah=document.getElementById('filterdata').value;
+           argeojson = <?php echo json_encode($hasil) ?>;
+            if(ubah=="Dataran rendah")
+              {
+                var poli;
+                console.log(argeojson);
+              for(var i = 0; i < argeojson.features.length; i++){
+                  if (argeojson.features[i].properties.ketinggian=='Dataran Rendah' ) {
+                      // console.log(argeojson.features[i].properties.gid);
+                      poli=L.geoJSON(argeojson.features[i].geometry).addTo(map);
+                      poli.setStyle({fillColor: '#000000'});
+                      poli.setStyle({fillOpacity: 0.5});
+                      poli.setStyle({color: 'none'});
+                      poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
+                  }
+                  else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
+                  {
+                  }
+                  else{
+                  }
+              }
+              }
+              else if(ubah=="Dataran Tinggi"){
+                          var poli;
+                          console.log(argeojson);
+                        for(var i = 0; i < argeojson.features.length; i++){
+                            if (argeojson.features[i].properties.ketinggian=='Dataran Rendah' ) {
+                            }
+                            else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' ){
+                              poli=L.geoJSON(argeojson.features[i].geometry).addTo(map);
+                              poli.setStyle({fillColor: '#FF0000'});
+                              poli.setStyle({fillOpacity: 0.5});
+                              poli.setStyle({color: 'none'});
+                              poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
+                            }
+                            else{
+                            }
+                        }
+                        }
+          }
+          </script>
+
+          <script>
+         //Verifikasi User untuk masuk menu bidding
+          function verifikasi_user(){
+            var roleuser='<?php echo $_SESSION['roleuser']?>';
+            // console.log(roleuser);
+            if (roleuser=='bpn'){
+              console.log('hai ini testing');
+              window.location='../pg_bidding/pencari/index.php';
+            }
+          }
+          function booking(){
+          console.log("Button Booking di tekan");
+          alert("Button Booking Ditekan!!!");
+          }
+          </script>
       </div>
     </section>
 
