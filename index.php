@@ -322,11 +322,10 @@
               <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
               <hr class="star-dark mb-5">
               <img class="img-fluid mb-5" src="fw_bootstrap/img/portfolio/message.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
+              <p class="mb-5">Test Apa yang terjadi</p>
+              <a class="btn btn-primary btn-lg rounded-pill" href="pg_chat/index.php">
+                <i class="fa fa-ok"></i>
+                Perpesanan</a>
           </div>
         </div>
       </div>

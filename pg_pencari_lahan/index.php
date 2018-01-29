@@ -17,6 +17,13 @@ else
     }
  }
 
+// if($_SESSION['id']=="3")
+// {
+//   header("Location: ../index.php");
+// }
+// else {
+//   header("Location: ../pg_chat/index.php");
+// }
 
 ?>
 
