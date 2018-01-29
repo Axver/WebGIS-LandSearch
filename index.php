@@ -1,6 +1,3 @@
-<?php
-include 'sy_proses/pr_getdatabpn.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,8 +54,8 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
-      <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="fw_bootstrap/img/profile.png" alt="">
+      <div class="container" style="background-color:BurlyWood;">
+        <img class="img-fluid mb-5 d-block mx-auto" src="fw_bootstrap/img/logo.png" alt="">
         <h1 class="text-uppercase mb-0">AndaLand</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">AndaLandnya Jual Beli Tanah di Indonesia</h2>
@@ -68,102 +65,56 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
+          <script type="text/javascript" src="../jquery/jquery.js"></script>
+          <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
+          <script type="text/javascript" src="../js/main.js"></script>
+          <script src="../fw_leaflet/leaflet-src.js"></script>
+          <link rel="stylesheet" href="../fw_leaflet/leaflet.css"/>
 
-          <script type="text/javascript" src="jquery/jquery.js"></script>
-          <script type="text/javascript" src="jquery/jquery-ui.js"></script>
-          <script type="text/javascript" src="js/main.js"></script>
-          <script src="fw_leaflet/leaflet-src.js"></script>
-          <link rel="stylesheet" href="fw_leaflet/leaflet.css"/>
+          <script src="../plugin_draw/src/Leaflet.draw.js"></script>
+          <script src="../plugin_draw/src/Leaflet.Draw.Event.js"></script>
+          <link rel="stylesheet" href="../plugin_draw/src/leaflet.draw.css"/>
 
-          <script src="plugin_draw/src/Leaflet.draw.js"></script>
-          <script src="plugin_draw/src/Leaflet.Draw.Event.js"></script>
-          <link rel="stylesheet" href="plugin_draw/src/leaflet.draw.css"/>
+          <script src="../plugin_draw/src/Toolbar.js"></script>
+          <script src="../plugin_draw/src/Tooltip.js"></script>
 
-          <script src="plugin_draw/src/Toolbar.js"></script>
-          <script src="plugin_draw/src/Tooltip.js"></script>
+          <script src="../plugin_draw/src/ext/GeometryUtil.js"></script>
+          <script src="../plugin_draw/src/ext/LatLngUtil.js"></script>
+          <script src="../plugin_draw/src/ext/LineUtil.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/Polygon.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/Polyline.Intersect.js"></script>
+          <script src="../plugin_draw/src/ext/TouchEvents.js"></script>
 
-          <script src="plugin_draw/src/ext/GeometryUtil.js"></script>
-          <script src="plugin_draw/src/ext/LatLngUtil.js"></script>
-          <script src="plugin_draw/src/ext/LineUtil.Intersect.js"></script>
-          <script src="plugin_draw/src/ext/Polygon.Intersect.js"></script>
-          <script src="plugin_draw/src/ext/Polyline.Intersect.js"></script>
-          <script src="plugin_draw/src/ext/TouchEvents.js"></script>
-
-          <script src="plugin_draw/src/draw/DrawToolbar.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Feature.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.SimpleShape.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Polyline.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Marker.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Circle.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.CircleMarker.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Polygon.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Rectangle.js"></script>
-
-
-          <script src="plugin_draw/src//edit/EditToolbar.js"></script>
-          <script src="plugin_draw/src/edit/handler/EditToolbar.Edit.js"></script>
-          <script src="plugin_draw/src/edit/handler/EditToolbar.Delete.js"></script>
-
-          <script src="plugin_draw/src/Control.Draw.js"></script>
-
-          <script src="plugin_draw/src/edit/handler/Edit.Poly.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.SimpleShape.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.Rectangle.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.Marker.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.CircleMarker.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.Circle.js"></script>
-
-          <script type="text/javascript" src="jquery/jquery.js"></script>
-          <script type="text/javascript" src="jquery/jquery-ui.js"></script>
-          <script type="text/javascript" src="js/main.js"></script>
-          <script src="fw_leaflet/leaflet-src.js"></script>
-          <link rel="stylesheet" href="fw_leaflet/leaflet.css"/>
-
-          <script src="plugin_draw/src/Leaflet.draw.js"></script>
-          <script src="plugin_draw/src/Leaflet.Draw.Event.js"></script>
-          <link rel="stylesheet" href="plugin_draw/src/leaflet.draw.css"/>
-
-          <script src="plugin_draw/src/Toolbar.js"></script>
-          <script src="plugin_draw/src/Tooltip.js"></script>
-
-          <script src="plugin_draw/src/ext/GeometryUtil.js"></script>
-          <script src="plugin_draw/src/ext/LatLngUtil.js"></script>
-          <script src="plugin_draw/src/ext/LineUtil.Intersect.js"></script>
-          <script src="plugin_draw/src/ext/Polygon.Intersect.js"></script>
-          <script src="plugin_draw/src/ext/Polyline.Intersect.js"></script>
-          <script src="plugin_draw/src/ext/TouchEvents.js"></script>
-
-          <script src="plugin_draw/src/draw/DrawToolbar.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Feature.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.SimpleShape.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Polyline.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Marker.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Circle.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.CircleMarker.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Polygon.js"></script>
-          <script src="plugin_draw/src/draw/handler/Draw.Rectangle.js"></script>
+          <script src="../plugin_draw/src/draw/DrawToolbar.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Feature.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.SimpleShape.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Polyline.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Marker.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Circle.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.CircleMarker.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Polygon.js"></script>
+          <script src="../plugin_draw/src/draw/handler/Draw.Rectangle.js"></script>
 
 
-          <script src="plugin_draw/src//edit/EditToolbar.js"></script>
-          <script src="plugin_draw/src/edit/handler/EditToolbar.Edit.js"></script>
-          <script src="plugin_draw/src/edit/handler/EditToolbar.Delete.js"></script>
+          <script src="../plugin_draw/src//edit/EditToolbar.js"></script>
+          <script src="../plugin_draw/src/edit/handler/EditToolbar.Edit.js"></script>
+          <script src="../plugin_draw/src/edit/handler/EditToolbar.Delete.js"></script>
 
-          <script src="plugin_draw/src/Control.Draw.js"></script>
+          <script src="../plugin_draw/src/Control.Draw.js"></script>
 
-          <script src="plugin_draw/src/edit/handler/Edit.Poly.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.SimpleShape.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.Rectangle.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.Marker.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.CircleMarker.js"></script>
-          <script src="plugin_draw/src/edit/handler/Edit.Circle.js"></script>
-
+          <script src="../plugin_draw/src/edit/handler/Edit.Poly.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.SimpleShape.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Rectangle.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Marker.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.CircleMarker.js"></script>
+          <script src="../plugin_draw/src/edit/handler/Edit.Circle.js"></script>
 
 
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta name="description" content="">
           <meta name="author" content="">
-
+        
           <select id="filterdata" onchange="filter()">
              <option>
               Kepadatan Penduduk
@@ -208,51 +159,12 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
 
                  <div class="panel-body">
                     <div id="booking" style="background-color:#18BC9C; height: 600px;">
-
-                      <div class="col-sm-4">
-                        <div class="panel panel-info" style="width:300px;height:400px;background-color:#4DD0E1; position:center;">
-                           <div class="panel-head">
-                           <h2 class="text-secondary text-uppercase mb-0">Login Page</h2>
-                           </div>
-
-                           <div class="panel-body" style="margin-top:50px;">
-                             <form class="" action="sy_proses/pr_login.php" method="post">
-                               <div class="row">
-                                 <div class="col-sm-4">
-                                     <label for="username">Username</label>
-                                 </div>
-                                 <div class="col-sm-6">
-                                   <input type="text" name="username">
-                                 </div>
-
-                               </div>
-
-                               <div class="row">
-
-                                 <div class="col-sm-4">
-                                   <label for="password">Password</label>
-                                 </div>
-                                 <div class="col-sm-6">
-                                   <input type="text" name="password">
-                                 </div>
-
-                               </div>
-
-                               <input type="submit" class="btn btn-primary" name="Login" value="LOGIN">
-                             </form>
-
-                             <br/>
-                             <p>Lupa Password? Klik Disini</p>
-                           </div>
-                        </div>
-
-                      </div>
                  </div>
                </div>
              </div>
              </div>
           </div>
-
+        
       <script>
      function refresh(){
       document.location.reload();
@@ -331,11 +243,7 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
                       poli.setStyle({fillColor: '#000000'});
                       poli.setStyle({fillOpacity: 0.5});
                       poli.setStyle({color: 'none'});
-
-                      poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
-
-
-
+                      poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
                   }
                   else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
                   {
@@ -355,10 +263,7 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
                               poli.setStyle({fillColor: '#FF0000'});
                               poli.setStyle({fillOpacity: 0.5});
                               poli.setStyle({color: 'none'});
-
-
-                              poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
-
+                              poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
                             }
                             else{
                             }
@@ -374,10 +279,7 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
             // console.log(roleuser);
             if (roleuser=='bpn'){
               console.log('hai ini testing');
-
-              window.location='pg_bidding/pencari/index.php';
-
-
+              window.location='../pg_bidding/pencari/index.php';
             }
           }
           function booking(){
