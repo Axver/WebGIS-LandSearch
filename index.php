@@ -193,19 +193,14 @@ include 'sy_proses/pr_getdatabpn.php';
       </select>
       <div class="row">
          <div class="col-sm-8">
-           <div id="map" style="width: 750px; height: 600px; border: 1px solid #ccc"></div>
+           <div id="map" style="width: 1100px; height: 600px; border: 1px solid #ccc"></div>
          </div>
          <div class="col-sm-4">
 
            <div class="panel panel-info">
 
              <div id="tampillogin" class="panel-body">
-                <div id="booking" style="background-color:#ddb786; height: 600px;">
 
-
-
-
-                  </div>
              </div>
 
            </div>
