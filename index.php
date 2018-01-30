@@ -129,13 +129,13 @@ include 'sy_proses/pr_getdatabpn.php';
       <div style="background-color:#6c2b0f;" class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onclick="testsaja()" id='sample1' href="loginpage.php">LOGIN</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onclick="testsaja()" id='sample1' href="#">Home</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onclick="biddinghome()" href="#">Bidding</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Log Out</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="loginpage.php">Login</a>
           </li>
         </ul>
       </div>
@@ -202,43 +202,7 @@ include 'sy_proses/pr_getdatabpn.php';
              <div id="tampillogin" class="panel-body">
                 <div id="booking" style="background-color:#ddb786; height: 600px;">
 
-                  <div class="panel panel-info" style="width:350px; height:400px;background-color:#ddb786; position:center;">
-                     <div class="panel-head">
-                     <h2 class="text-secondary text-uppercase mb-0">Login Page</h2>
-                     </div>
 
-                     <div class="panel-body" style="margin-top:50px;">
-                       <form class="" action="sy_proses/pr_login.php" method="post">
-                         <div class="row">
-                           <div class="col-sm-4">
-                               <label for="username">Username</label>
-                           </div>
-                           <div class="col-sm-6">
-                             <input type="text" name="username">
-                           </div>
-
-                         </div>
-
-                         <div class="row">
-
-                           <div class="col-sm-4">
-                             <label for="password">Password</label>
-                           </div>
-                           <div class="col-sm-6">
-                             <input type="text" name="password">
-                           </div>
-
-                         </div>
-
-                         <input type="submit" class="btn btn-primary" name="Login" value="LOGIN">
-                       </form>
-
-                       <br/>
-                       <p>Lupa Password? Klik Disini</p>
-                       <button type="button" class="btn btn-danger" name="button">Lupa Password</button>
-
-                     </div>
-                  </div>
 
 
                   </div>
