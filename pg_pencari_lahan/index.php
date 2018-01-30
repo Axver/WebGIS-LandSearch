@@ -31,6 +31,14 @@ else
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="../plugin_swal/sweet-alert.css">
+  <link rel="stylesheet" href="../plugin_swal/swal-forms.css">
+
+  <!-- This is what you need -->
+  <script src="../plugin_swal/sweet-alert.js"></script>
+  <script src="../plugin_swal/swal-forms.js"></script>
+
+  <script src="../plugin_swal/live-demo.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js" integrity="sha512-C7BBF9irt5R7hqbUm2uxtODlUVs+IsNu2UULGuZN7gM+k/mmeG4xvIEac01BtQa4YIkUpp23zZC4wIwuXaPMQA==" crossorigin=""></script>
@@ -112,7 +120,7 @@ else
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_chat/index.php">Perpesanan</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_bidding/pencari">Bidding</a>
@@ -385,6 +393,8 @@ else
         document.getElementById("element_3").innerHTML="<h3>Booking Tanah</h3>";
         document.getElementById("element_4").innerHTML="<h3>Booking Tanah</h3>";
         document.getElementById("element_5").innerHTML="<h3>Booking Tanah</h3>";
+
+
       }
 
       </script>
