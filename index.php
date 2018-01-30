@@ -5,6 +5,11 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
 <html lang="en">
 
   <head>
+    <style media="screen">
+      testing{
+        background-color: #deb887;
+      }
+    </style>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,8 +61,8 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
-      <div class="container">
+    <header id="testing" style="background-color:burlywood;" class="masthead bg-primary text-white text-center">
+      <div style="background-color:##deb887;"class="container">
         <img class="img-fluid mb-5 d-block mx-auto" src="fw_bootstrap/img/profile.png" alt="">
         <h1 class="text-uppercase mb-0">AndaLand</h1>
         <hr class="star-light">
@@ -207,10 +212,10 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
                <div class="panel panel-info">
 
                  <div class="panel-body">
-                    <div id="booking" style="background-color:#18BC9C; height: 600px;">
+                    <div id="booking" style="background-color:#ddb786; height: 600px;">
 
                       <div class="col-sm-4">
-                        <div class="panel panel-info" style="width:300px;height:400px;background-color:#4DD0E1; position:center;">
+                        <div class="panel panel-info" style="width:300px;height:400px;background-color:#ddb786; position:center;">
                            <div class="panel-head">
                            <h2 class="text-secondary text-uppercase mb-0">Login Page</h2>
                            </div>
@@ -389,7 +394,7 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
     </section>
 
     <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <!-- <section class="bg-primary text-white mb-0" id="about">
       <div class="container">
         <h2 class="text-center text-uppercase text-white">About</h2>
         <hr class="star-light mb-5">
@@ -408,7 +413,7 @@ include 'sy_proses/pr_getdatabpn.php'; ?>
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <!-- <section id="contact">

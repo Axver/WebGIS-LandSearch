@@ -179,7 +179,7 @@ else
            <div class="panel panel-info">
 
              <div class="panel-body">
-                <div id="booking" style="background-color:#18BC9C; height: 600px;">
+                <div id="booking" style="background-color:#ddb786; height: 600px;">
 
                   <div id="element_1">
 
