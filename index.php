@@ -290,12 +290,12 @@ include 'sy_proses/pr_getdatabpn.php';
 
       function infolahan()
        {
-         swal("Anda Hasur Login Terlebih Dahulu");
+         swal("Anda Harus Login Terlebih Dahulu");
 
        }
       function booking()
         {
-          swal("Anda Hasur Login Terlebih Dahulu");
+          swal("Anda Harus Login Terlebih Dahulu");
         }
 
       function filter()
@@ -364,16 +364,16 @@ include 'sy_proses/pr_getdatabpn.php';
 
       <script>
      //Verifikasi User untuk masuk menu bidding
-      function verifikasi_user()
-      {
-        var roleuser='<?php echo $_SESSION['roleuser']?>';
+      // function verifikasi_user()
+      // {
+        // var roleuser='';
         // console.log(roleuser);
-        if (roleuser=='bpn')
-        {
-          console.log('hai ini testing');
-          swal("Warning!!","Anda harus login terlebih dahulu");
-        }
-      }
+      //   if (roleuser=='bpn')
+      //   {
+      //     console.log('hai ini testing');
+      //     swal("Warning!!","Anda harus login terlebih dahulu");
+      //   }
+      // }
 
 
 
