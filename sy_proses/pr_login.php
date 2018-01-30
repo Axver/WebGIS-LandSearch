@@ -65,6 +65,7 @@ else {
 
 }
 else {
+  header("Location:../loginpage.php");
 
 echo "Gagal";
 }
