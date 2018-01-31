@@ -14,7 +14,7 @@
 
 function redirectdaftar()
  {
-   window.location.href = "http://localhost/magang_1/registerpage.php";
+   window.location.href = "../magang_1/registerpage.php";
  }
 
 </script>
