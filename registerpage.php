@@ -34,26 +34,63 @@ function redirectdaftar()
           <h1 style="text-align:center; color:white;">  Register Page <h1>
         </div>
 
-        <div style="background-color:#DEB887; height:500px;" class="panel-body">
+        <div style="background-color:#DEB887; height:600  px;" class="panel-body">
 
-          <form action="sy_proses/pr_login.php" method="post">
-         <div class="form-group">
-         <label for="email">Username:</label>
-        <input type="text" class="form-control" name="username" id="email">
-      </div>
-      <div class="form-group">
-      <label for="pwd">Password:</label>
-     <input type="password" name="password"class="form-control" id="pwd">
-     </div>
-     <div class="checkbox">
-     <label><input type="checkbox"> Remember me</label>
-      </div>
-     <button type="submit" class="btn btn-default">Submit</button>
-     </form>
+          <div class="row">
 
-     Belum punya akun?
-     <button type="button" class="btn btn-info" onclick="redirectdaftar()" name="button"> Daftar Disini</button>
-     <br/>
+            <div class="col-sm-4">
+              <h3>Biodata Diri</h3>
+
+              <form action="sy_proses/pr_login.php" method="post">
+                <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+               <input type="text" class="form-control" name="username" id="nama">
+             </div>
+
+             <div class="form-group">
+             <label for="email">Email:</label>
+            <input type="text" class="form-control" name="username" id="email">
+          </div>
+          <div class="form-group">
+          <label for="nohp">No HP:</label>
+         <input type="text" class="form-control" name="username" id="nohp">
+       </div>
+             <div class="form-group">
+             <label for="username">Username:</label>
+            <input type="text" class="form-control" name="username" id="username">
+          </div>
+          <div class="form-group">
+          <label for="pwd">Password:</label>
+         <input type="password" name="password"class="form-control" id="pwd">
+         </div>
+         <div class="checkbox">
+         <label><input type="checkbox"> Remember me</label>
+          </div>
+         <button type="submit" class="btn btn-default">Submit</button>
+         </form>
+
+
+
+            </div>
+
+            <div class="col-sm-4">
+
+              <h3>Upload Berkas</h3>
+              <div class="form-group">
+              <label for="nik">NIK:</label>
+             <input type="text" name="nik"class="form-control" id="nik">
+             </div>
+
+            </div>
+
+            <div class="col-sm-4">
+              <h3> Foto User </h3>
+
+            </div>
+
+          </div>
+
+
 
         </div>
       </div>
