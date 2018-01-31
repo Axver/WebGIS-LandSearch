@@ -136,10 +136,10 @@ else {
 </head>
 
 
-<body id="page-top" style="background-color: #ffffe6;">
+<body id="page-top" style="background-color:#ffffe6;">
 
 <!-- Navigation -->
-<nav style="background-color:#664d00;" class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+<nav style="background-color:#f4edbd;" class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <img class="img-responsive" style="width:200px; height:100px;" href="index.php" src="fw_bootstrap/img/3.png" alt="" >
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -183,7 +183,7 @@ else {
                 myIndex++;
                 if (myIndex > x.length) {myIndex = 1}
                 x[myIndex-1].style.display = "block";
-                setTimeout(carousel, 2000); // Change image every 2 seconds
+                setTimeout(carousel, 10000); // Change image every 2 seconds
             }
         </script>
     </div>
@@ -192,7 +192,7 @@ else {
 </header>
 
 <!-- Portfolio Grid Section -->
-<section class="portfolio" id="portfolio">
+<section style="margin-left:200px;"class="portfolio" id="portfolio">
     <div class="container">
 
         <select id="filterdata" onchange="filter()">
@@ -231,7 +231,7 @@ else {
         </select>
         <div class="row">
             <div class="col-sm-8">
-                <div id="map" style="width: 1100px; height: 600px; border: 1px solid #ccc"></div>
+                <div id="map" style=" width: 900px; height: 600px; border: 1px solid #ccc"></div>
             </div>
             <div class="col-sm-4">
 
