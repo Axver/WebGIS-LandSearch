@@ -1,4 +1,6 @@
 # magang_1
 Program pas magang
 
-Kok nio bantu bagian chat nyo hahahaha
+-Perbaiki tampilan dan alur proses user
+-Tolong beritahu semua permasalahannya
+-Apa lagi yg perlu ditambahkan?

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 
@@ -19,58 +19,57 @@ function redirectdaftar()
 
 </script>
     <meta charset="utf-8">
-    <title>Login Page</title>
+    <title>Login</title>
     <style media="screen">
 
     </style>
-  </head>
+</head>
 
-  <body>
+<body style="background-color: #ffffb3; margin-top: 100px" >
 
-    <div class="container">
+<div class="container" align="center" >
 
-      <div class="row">
+    <div class="row" style="position: center">
         <div class="col-sm-3">
 
         </div>
-        <div class="col-sm-3">
-          <div id="login"  class="panel panel-info" style="width:400px; background-color:#cc9e66;">
-            <div class="panel-head" style="background-color:#6c2b0f;">
-              <h1 style="text-align:center; color:white;">  Login Page <h1>
+        <div class="col-sm-3" >
+            <div id="login"  class="panel panel-info" style=" margin-left:90px; width:400px;">
+                <div class="panel-head" style="background-color: #cc9900; ">
+                    <h1 style="text-align:center; color:white; font-family: 'Freestyle Script'; font-size: 60px;"><b>  Andaland </b> </h1>
+                </div>
+
+                <div style="background-color: lightyellow ; height: 280px;" class="panel-body">
+
+                    <form action="sy_proses/pr_login.php" method="post">
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="text" class="form-control" name="username" id="email" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd"></label>
+                            <input type="password" name="password"class="form-control" id="pwd" placeholder="Password">
+                        </div>
+                        <div class="checkbox" align="left">
+                            <label ><input type="checkbox"> Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-default" style="background-color: #cc9900;">Submit</button>
+                    </form>
+                    <br>
+                    <p class="text--center" align="left">Don't have an account? <a onclick="redirectdaftar()" href="#">Sign up now</a></p>
+                </div>
+
+
+
             </div>
-
-            <div style="background-color:#DEB887; height:500px;" class="panel-body">
-
-              <form action="sy_proses/pr_login.php" method="post">
-             <div class="form-group">
-             <label for="email">Username:</label>
-            <input type="text" class="form-control" name="username" id="email">
-          </div>
-          <div class="form-group">
-          <label for="pwd">Password:</label>
-         <input type="password" name="password"class="form-control" id="pwd">
-         </div>
-         <div class="checkbox">
-         <label><input type="checkbox"> Remember me</label>
-          </div>
-         <button type="submit" class="btn btn-default">Submit</button>
-         </form>
-
-         Belum punya akun?
-         <button type="button" class="btn btn-info" onclick="redirectdaftar()" name="button"> Daftar Disini</button>
-         <br/>
-
-            </div>
-          </div>
         </div>
         <div class="col-sm-3">
 
         </div>
-      </div>
-
-
-
     </div>
 
-  </body>
+
+</div>
+
+</body>
 </html>
