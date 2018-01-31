@@ -1,3 +1,23 @@
+<?php
+
+session_start();
+if(isset($_SESSION['username']))
+   {
+      if ($_SESSION['username']=='user')
+      {
+        //Do nothing
+      }
+      else if($_SESSION['username']=='pemilik') {
+            header("Location:../pemilik/index.php");
+      }
+   }
+else {
+  header("Location:../../index.php");
+}
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,13 +68,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../index.php">Home</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Log Out</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../sy_proses/pr_logout.php">Log Out</a>
           </li>
         </ul>
       </div>

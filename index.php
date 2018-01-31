@@ -3,7 +3,20 @@
 // include '../sy_proses/pr_getdata.php';
 include 'sy_proses/pr_getdatabpn.php';
 
-// session_start();
+session_start();
+if(isset($_SESSION['username']))
+   {
+      if ($_SESSION['username']=='user')
+      {
+        header("Location:pg_pencari_lahan/index.php");
+      }
+      else if($_SESSION['username']=='pemilik') {
+            header("Location:pg_pemilik_lahan/index.php");
+      }
+   }
+else {
+  //Do Nothing
+}
 // if (!isset($_SESSION['username'])){
 //
 // echo "<script> alert('Anda Harus Log In Terlebih Dahulu!!'); window.location = '../index.php'; </script>";
