@@ -114,6 +114,12 @@ function redirectdaftar()
              <input type="text" name="nik"class="form-control" id="nik">
              </div>
 
+               <input class="btn btn-info" type="file" />
+               <input class="btn btn-info" type="file" />
+               <input class="btn btn-info" type="file" />
+               <input class="btn btn-info" type="file" />
+               <input class="btn btn-info" type="file" />
+
             </div>
 
             <div class="col-sm-4">
@@ -122,7 +128,7 @@ function redirectdaftar()
               <form id="myForm" action="" method="get">
             <!--'preview' di bawah ini adalah id element img-->
             <input class="btn btn-info" type="file" accept="image/*"  onchange="tampilkanPreview(this,'preview')" />
-            <input class="btn btn-info" type="submit" value="Upload" /><br/>
+          
             <!--element image untuk menampilkan preview-->
             <img style="height:40%;"id="preview" src="" alt="" width="40%"/>
             </form>
