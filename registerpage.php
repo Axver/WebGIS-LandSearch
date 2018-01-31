@@ -108,16 +108,22 @@ function redirectdaftar()
 
             <div class="col-sm-4">
 
-              <h3>Upload Berkas</h3>
+              <h3>Upload Berkas (Image)</h3>
               <div class="form-group">
               <label for="nik">NIK:</label>
              <input type="text" name="nik"class="form-control" id="nik">
              </div>
 
+               <label for="ktp">Scan KTP:</label>
+
+               <input id="ktp" class="btn btn-info" type="file" />
+               <label for="kk">Scan KK:</label>
+               <input id="kk"class="btn btn-info" type="file" />
+               <label for="sertipikat">Scan Sertipikat Tanah:</label>
+               <input id="sertipikat"class="btn btn-info" type="file" />
+               <label for="sertipikat">Scan Dokumen 1:</label>
                <input class="btn btn-info" type="file" />
-               <input class="btn btn-info" type="file" />
-               <input class="btn btn-info" type="file" />
-               <input class="btn btn-info" type="file" />
+               <label for="sertipikat">Scan Dokumen 2:</label>
                <input class="btn btn-info" type="file" />
 
             </div>
@@ -128,9 +134,9 @@ function redirectdaftar()
               <form id="myForm" action="" method="get">
             <!--'preview' di bawah ini adalah id element img-->
             <input class="btn btn-info" type="file" accept="image/*"  onchange="tampilkanPreview(this,'preview')" />
-          
+
             <!--element image untuk menampilkan preview-->
-            <img style="height:40%;"id="preview" src="" alt="" width="40%"/>
+            <img style="height:60%;"id="preview" src="" alt="" width="60%"/>
             </form>
 
             </div>
