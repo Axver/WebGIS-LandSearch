@@ -76,13 +76,13 @@ else
          <div style="background-color:##664d00; font-family: 'Freestyle Script'; font-size: 20px" class="collapse navbar-collapse" id="navbarResponsive" >
              <ul class="navbar-nav ml-auto">
                  <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onclick="testsaja()" id='sample1' href="#">Home</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onclick="testsaja()" id='sample1' href="../index.php">Home</a>
                  </li>
                  <li class="nav-item mx-0 mx-lg-1">
                      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" onclick="biddinghome()" href="#">Bidding</a>
                  </li>
                  <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="loginpage.php">Login</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Logout</a>
                  </li>
              </ul>
          </div>
