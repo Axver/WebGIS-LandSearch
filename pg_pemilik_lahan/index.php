@@ -310,7 +310,7 @@ else
       function passing_php()
       {
         var sertipikat=document.getElementById("id").value;
-        window.location.href = "http://localhost/magang_1/sy_proses/pr_inputbpn.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
+        window.location.href = "../../magang_1/sy_proses/pr_inputbpn.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
 
       }
 

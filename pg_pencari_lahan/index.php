@@ -382,7 +382,7 @@ else
       document.getElementById("element_2").innerHTML="<div class='container'><table class='table'><thead><tr><th>Info</th><th>Detil</th></tr></thead><tbody><tr><td>Luas</td><td>10000 m2</td></tr><tr><td>Harga</td><td>1.000.000.000</td></tr><tr><td>July</td><td>Dooley</td></tr></tbody></table></div>";
       document.getElementById("element_3").innerHTML="Dijual Oleh : Jesi Namora (Pemilik)";
       document.getElementById("element_4").innerHTML="Lelang? Ya!";
-      document.getElementById("element_5").innerHTML="<button class='btn btn-info'> Booking </button>";
+      document.getElementById("element_5").innerHTML="<button class='btn btn-info' onclick='bookingtanah()'> Booking </button>";
 
       }
 
@@ -396,6 +396,12 @@ else
 
 
       }
+
+      function bookingtanah()
+       {
+         // alert("Button Booking Tanah Ditekan");
+         window.location = "../pg_booking/index.php";
+       }
 
       </script>
 

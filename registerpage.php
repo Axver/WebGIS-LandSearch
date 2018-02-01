@@ -1,3 +1,7 @@
+<?php
+include 'sy_proses/pr_checkusername.php';
+
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +22,12 @@ function redirectdaftar()
  }
 
 </script>
+<script>
 
+a= <?php echo json_encode($arrayuser) ?>
+console.log(a);
+
+</script>
 <script>
            function tampilkanPreview(gambar,idpreview){
 //                membuat objek gambar
@@ -74,7 +83,7 @@ function redirectdaftar()
             <div class="col-sm-4">
               <h3>Biodata Diri</h3>
 
-              <form action="sy_proses/pr_login.php" method="post">
+              <form action="sy_proses/pr_register.php" method="post">
                 <div class="form-group">
                 <label for="nama">Nama Lengkap:</label>
                <input type="text" class="form-control" name="username" id="nama">
@@ -96,9 +105,15 @@ function redirectdaftar()
           <label for="pwd">Password:</label>
          <input type="password" name="password"class="form-control" id="pwd">
          </div>
-         <div class="checkbox">
-         <label><input type="checkbox"> Remember me</label>
-          </div>
+         <div class="form-group">
+         <label  for="role">Role:</label>
+         <select class="" name="role">
+           <option value="user">User</option>
+           <option value="pemilik">Pemilik</option>
+
+         </select>
+        </div>
+
          <button type="submit" class="btn btn-default">Submit</button>
          </form>
 
