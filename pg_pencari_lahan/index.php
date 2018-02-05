@@ -31,6 +31,7 @@
 <html lang="en">
 
 	<head>
+
 		<link rel="stylesheet" href="../plugin_swal/sweet-alert.css">
 		<link rel="stylesheet" href="../plugin_swal/swal-forms.css">
 
@@ -131,6 +132,7 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="../fw_bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 	<!-- Custom fonts for this template -->
 	<link href="../fw_bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -271,7 +273,7 @@
 	<div class="col-sm-3">
 
 	<div class="slidecontainer">
-	<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+	<input onchange="getradius()" type="range" min="1" max="1000" value="1" class="slider" id="myRange">
 	</div>
 	<div class="row">
 
@@ -281,7 +283,7 @@
     </div>
 	</div>
 	<div class="col-sm-1">
-    KM
+    Meter
 	</div>
 
 	</div>
@@ -385,6 +387,16 @@
 	attribution: 'google'
 	})
 	}, { 'drawlayer': drawnItems }, { position: 'topleft', collapsed: false }).addTo(map);
+
+	map.on('click', function(e) {
+		// var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
+    swal("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+    var newMarker = new L.marker(e.latlng).addTo(map);
+		latitude=e.latlng.lat;
+		longitude=e.latlng.lng;
+  });
+
+
 	// map.addControl(new L.Control.Draw({
 	//     edit: {
 	//         featureGroup: drawnItems,
@@ -421,6 +433,8 @@
 
 	// console.log(hapus_belakang);
 	console.log(res4);
+
+
 
 
 
@@ -553,6 +567,7 @@
 
 	function locateUser(){
 	map.locate({setView : true});
+	swal("Klik Dimana Posisi Anda");
     }
 
 	</script>
@@ -580,6 +595,25 @@
 	slider1.oninput = function() {
     output1.innerHTML = this.value;
 	}
+
+	</script>
+
+	<script>
+
+	function getradius()
+	{
+      var radiusdata=document.getElementById("myRange").value;
+			var circle = L.circle([latitude, longitude], {
+			color: 'red',
+			fillColor: '#f03',
+			fillOpacity: 0.5,
+			radius: radiusdata
+		}).addTo(map);
+
+
+	}
+
+
 
 	</script>
 
