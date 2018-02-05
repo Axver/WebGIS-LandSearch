@@ -1,0 +1,21 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#map {
+	width: 900px;
+	height: 600px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.owm-layercontrol-header {
+	font-size: larger;
+	font-weight: bold;
+	display: block;
+	position: relative;
+}
