@@ -303,7 +303,7 @@
 	<div class="col-sm-12">
 
 	<div class="slidecontainer">
-	<input type="range" min="10000000" max="1000000000" value="10000000" class="slider" id="myRange1">
+	<input onchange="getharga()"type="range" min="10000000" max="1000000000" value="10000000" class="slider" id="myRange1">
 	</div>
 	<div class="row">
 
@@ -628,15 +628,23 @@
 			}
 			var marker = L.marker([latitude, longitude]).addTo(map);
 
-	
-
-		}
-
-
-
 
 
 		}
+
+
+
+
+
+		}
+
+	}
+
+
+	function getharga()
+	{
+
+		swal("Tampilkan Daerah Marker sesuai harga");
 
 	}
 
