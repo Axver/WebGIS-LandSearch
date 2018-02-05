@@ -390,7 +390,7 @@
 
 	map.on('click', function(e) {
 		// var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
-    swal("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+    swal("Posisi Anda berhasil dipilih");
     var newMarker = new L.marker(e.latlng).addTo(map);
 		latitude=e.latlng.lat;
 		longitude=e.latlng.lng;
@@ -611,10 +611,28 @@
 			var radiusdata=document.getElementById("myRange").value;
 			var circle = L.circle([latitude, longitude], {
 			color: 'red',
-			fillColor: '#f03',
+			fillColor: '#DDB786',
 			fillOpacity: 0.5,
 			radius: radiusdata
 		}).addTo(map);
+   //Menambahkan marker disetiap radius (hardcoded)
+   for(i=0;i<5;i++)
+	  {
+			if(i%2==0)
+			{latitude=latitude+0.00021;
+			longitude=longitude+0.00021;
+		  }
+			else {
+				latitude=latitude+0.00042;
+				longitude=longitude-0.00042;
+			}
+			var marker = L.marker([latitude, longitude]).addTo(map);
+
+	
+
+		}
+
+
 
 
 
