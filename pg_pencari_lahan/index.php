@@ -46,6 +46,44 @@ else
     #mapid {
       height: 600px;
     }
+    .slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
   </style>
   <script type="text/javascript" src="../jquery/jquery.js"></script>
   <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
@@ -219,11 +257,66 @@ else
         </div> -->
       </div>
 
-      <div class="row">
+      <div class="row" style="margin-top:20px;">
 
-        <div class="col-sm-1">
+        <div class="col-sm-2">
 
           <button type="button" class="btn btn-info" onclick="locateUser()" name="button"> Your Position</button>
+
+        </div>
+        <div class="col-sm-1">
+            Radius :
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<div class="row">
+
+  <div class="col-sm-2">
+    <div id="demo">
+
+    </div>
+  </div>
+  <div class="col-sm-1">
+    KM
+  </div>
+
+</div>
+
+
+
+        </div>
+
+
+        <div class="col-sm-1">
+          Harga
+
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="col-sm-12">
+
+            <div class="slidecontainer">
+           <input type="range" min="10000000" max="1000000000" value="10000000" class="slider" id="myRange1">
+          </div>
+             <div class="row">
+
+             <div class="col-sm-2">
+             <div id="demo1">
+
+             </div>
+            </div>
+
+
+  </div>
+
+
+
+          </div>
 
         </div>
 
@@ -461,6 +554,32 @@ else
        function locateUser(){
         map.locate({setView : true});
     }
+
+      </script>
+
+      <script>
+
+      var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+      </script>
+
+      <script>
+
+      var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider1.oninput = function() {
+    output1.innerHTML = this.value;
+}
 
       </script>
 
