@@ -147,7 +147,7 @@
 
 	</head>
 
-	<body id="page-top">
+	<body onload="checklat()" id="page-top">
 
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -568,6 +568,7 @@
 	function locateUser(){
 	map.locate({setView : true});
 	swal("Klik Dimana Posisi Anda");
+	a="1";
     }
 
 	</script>
@@ -602,7 +603,12 @@
 
 	function getradius()
 	{
-      var radiusdata=document.getElementById("myRange").value;
+		if (a=="0")
+		{
+			swal("Pilih Posisi Anda Terlebih Dahulu!")
+		}
+		else {
+			var radiusdata=document.getElementById("myRange").value;
 			var circle = L.circle([latitude, longitude], {
 			color: 'red',
 			fillColor: '#f03',
@@ -611,9 +617,21 @@
 		}).addTo(map);
 
 
+
+		}
+
 	}
 
 
+
+	</script>
+
+	<script>
+
+	function checklat()
+	{
+		a="0";
+	}
 
 	</script>
 
