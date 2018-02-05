@@ -90,9 +90,6 @@ else
  </nav>
 
  <!-- Header -->
-
-
-
  </header>
 
  <!-- Portfolio Grid Section -->

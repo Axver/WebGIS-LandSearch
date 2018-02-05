@@ -143,41 +143,96 @@ else
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
+      <div class="row">
 
-      <select id="filterdata" onchange="filter()">
-         <option>
-          Kepadatan Penduduk
-         </option>
-         <option>
-          Curah Hujan
-         </option>
+        <div class="col-sm-2">
+          <select class="form-control" id="filterdata" onchange="filter()">
 
-         <option>
-          Dataran rendah
-         </option>
+             <option>
+              Dataran rendah
+             </option>
 
-         <option>
-          Dataran Tinggi
-         </option>
-      </select>
-      <button  type="button" class="btn btn-success" name="button" onclick="refresh()"> Refresh  </button>
-      <button type="button" class="btn btn-info" name="button" onclick="tampildigitasi()"> Luas (m2)</button>
-      <select>
-         <option>
-          <=5000
-         </option>
-         <option>
-          5001-10000
-         </option>
-         10001-20000
-         <option>
-          20000-40000
-         </option>
+             <option>
+              Dataran Tinggi
+             </option>
+             <option>
+              Kepadatan Penduduk
+             </option>
+             <option>
+             Kondisi Fisik
+             </option>
+          </select>
+        </div>
+        <div class="col-sm-1">
+          <button  type="button" class="btn btn-success" name="button" onclick="refresh()"> Refresh  </button>
 
-         <option>
-          >40000
-         </option>
-      </select>
+        </div>
+        <div class="col-sm-1">
+          <button type="button" class="btn btn-info" name="button" onclick="tampildigitasi()"> Luas (m2)</button>
+        </div>
+        <div class="col-sm-2">
+          <select class="form-control">
+             <option>
+              <=5000
+             </option>
+             <option>
+              5001-10000
+             </option>
+             10001-20000
+             <option>
+              20000-40000
+             </option>
+
+             <option>
+              >40000
+             </option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          Fasilitas Terdekat:
+
+        </div>
+
+        <div class="col-sm-2">
+          <select class="form-control">
+              <option>
+               Rumah Sakit
+              </option>
+              <option>
+               Halte
+              </option>
+              Fasilitas X
+              <option>
+               Fasilitas Y
+              </option>
+
+              <option>
+               Fasilitas Z
+              </option>
+           </select>
+        </div>
+        <!-- <div class="col-sm-1">
+         <button type="button" class="btn btn-info" name="button">Cuaca</button>
+        </div>
+        <div class="col-sm-1">
+           <button type="button" class="btn btn-info" name="button">Kepadatan Penduduk</button>
+        </div> -->
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-1">
+
+          <button type="button" class="btn btn-info" onclick="locateUser()" name="button"> Your Position</button>
+
+        </div>
+
+
+
+      </div>
+
+
+
       <div class="row">
          <div class="col-sm-8">
            <div id="map" style="width: 750px; height: 600px; border: 1px solid #ccc"></div>
@@ -402,6 +457,10 @@ else
          // alert("Button Booking Tanah Ditekan");
          window.location = "../pg_booking/index.php";
        }
+
+       function locateUser(){
+        map.locate({setView : true});
+    }
 
       </script>
 
