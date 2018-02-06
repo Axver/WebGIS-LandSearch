@@ -268,7 +268,7 @@
 
 	<div><b>Facility</b>
 	<br>
-	<select class="form-control">
+	<select id="fasilitas" onchange="fasilitas()"class="form-control">
 	<option>Rumah Sakit</option>
 	<option>Halte</option>
 	<option>Masjid</option>
@@ -444,6 +444,21 @@
 	}
 	}
 	}
+	else if(ubah=="Kepadatan Penduduk")
+	  {
+			var polygon = L.polygon([
+    [-6.102879, 106.705032],
+    [-6.152035, 106.757217],
+    [-6.239413, 106.586929]
+]).addTo(map);
+		}
+		else {
+			var polygon = L.polygon([
+		[-6.102879, 106.705032],
+		[-6.152035, 106.757217],
+		[-6.239413, 106.586929]
+]).addTo(map);
+		}
 	}
 	</script>
 
@@ -578,9 +593,66 @@
 	</script>
 
 	<script>
+  // Membuat Random marker
+
 	function checklat()
 	{
 	a="0";
+	}
+
+	function fasilitas()
+	{
+		var fas=document.getElementById("fasilitas").value;
+		if(fas=="Rumah Sakit")
+		{
+			swal("Data yang ditampilkan BUKAN data Asli!")
+       for(i=0;i<100;i++)
+			 {
+				 var rndCoordinates = function(from, to, fixed) {
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
+			 var markerlon=106.823349;
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+    }
+		}
+		else if(fas="Halte") {
+			swal("Data yang ditampilkan BUKAN data Asli!")
+       for(i=0;i<100;i++)
+			 {
+				 var rndCoordinates = function(from, to, fixed) {
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
+			 var markerlon=106.823349;
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+    }
+		}
+		else if(fas="Masjid")
+		{
+			swal("Data yang ditampilkan BUKAN data Asli!")
+       for(i=0;i<100;i++)
+			 {
+				 var rndCoordinates = function(from, to, fixed) {
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
+			 var markerlon=106.823349;
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+    }
+		}
+		else {
+			swal("Data yang ditampilkan BUKAN data Asli!")
+       for(i=0;i<100;i++)
+			 {
+				 var rndCoordinates = function(from, to, fixed) {
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
+			 var markerlon=106.823349;
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+    }
+		}
 	}
 	</script>
 
