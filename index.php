@@ -1,7 +1,7 @@
 <?php
-	
+
 	include 'sy_proses/pr_getdatabpn.php';
-	
+
 	session_start();
 	if(isset($_SESSION['username']))
 	{
@@ -28,7 +28,7 @@
 	//         header("Location: ../index.php");
 	//     }
 	//  }
-	
+
 	// if($_SESSION['id']=="3")
 	// {
 	//   header("Location: ../index.php");
@@ -162,12 +162,12 @@ Menu
 </nav>
 
 <!-- Header -->
-<div class="container" style="background-color:#ffffe6">
-<div class="w3-content w3-section" style="max-width:500px">
-<img class="mySlides" src="a.jpg" style="width:100%">
-<img class="mySlides" src="m.jpg" style="width:100%">
-<img class="mySlides" src="s.jpg" style="width:100%">
-<img class="mySlides" src="v.jpg" style="width:100%">
+<div class="container" style="background-color:#ffffff; padding-left:20px; padding-right:20px;">
+<div class="w3-content w3-section" style="height:500px;">
+<img class="mySlides" src="a.jpg" style="width:100%;height:500px;">
+<img class="mySlides" src="m.jpg" style="width:100%;height:500px;">
+<img class="mySlides" src="s.jpg" style="width:100%;height:500px;">
+<img class="mySlides" src="v.jpg" style="width:100%;height:500px;">
 </div>
 
 <script>

@@ -210,9 +210,9 @@ else
 </nav>
 
 <!-- Header -->
-<header class="masthead bg-primary text-white text-center">
+<header class="masthead bg-primary text-white text-center" style="background-color: #ffffff;"
     <div class="container">
-	<div class="w3-content w3-section" >
+	<div class="w3-content w3-section" style="background-color: #ffffff;padding-left:30px;padding-right:30px;">
             <img class="mySlides" src="../a.jpg" style="width:100%; height: 400px">
             <img class="mySlides" src="../m.jpg" style="width:100%; height: 400px">
             <img class="mySlides" src="../s.jpg" style="width:100%; height: 400px">
@@ -327,13 +327,13 @@ else
             //         attribution: 'google'
             //     })
             // }, { 'drawlayer': drawnItems }, { position: 'topleft', collapsed: false }).addTo(map);
-            // map.on('click', function(e) {
-            //     // var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
-            //     swal("Posisi Anda berhasil dipilih");
-            //     var newMarker = new L.marker(e.latlng).addTo(map);
-            //     latitude=e.latlng.lat;
-            //     longitude=e.latlng.lng;
-            // });
+            map.on('click', function(e) {
+                // var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
+                swal("Posisi Anda berhasil dipilih");
+                var newMarker = new L.marker(e.latlng).addTo(map);
+                latitude=e.latlng.lat;
+                longitude=e.latlng.lng;
+            });
             // map.addControl(new L.Control.Draw({
             //     edit: {
             //         featureGroup: drawnItems,
