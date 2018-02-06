@@ -73,7 +73,7 @@ else
     .slider::-moz-range-thumb {
         width: 25px; /* Set a specific slider handle width */
         height: 25px; /* Slider handle height */
-        background: #b38f00;
+        background: #b38f00; 
         cursor: pointer; /* Cursor on hover */
     }
 </style>
@@ -183,12 +183,11 @@ else
 
 </head>
 
-<body onload="checklat()" id="page-top">
+<body onload="checklat()" id="page-top" style="background-color:#ffffff;">
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav" style="background-color:#f4edbd">
    <img class="img-responsive" style="width:170px; height:40px;" href="index.php" src="fw_bootstrap/img/3.png" alt="" >
-        <a class="navbar-brand js-scroll-trigger" href="../index.php">Lahan</a>
         <button class="button button1" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
@@ -206,17 +205,17 @@ else
                 </li>
             </ul>
         </div>
-
+   
 </nav>
 
 <!-- Header -->
 <header class="masthead bg-primary text-white text-center">
     <div class="container">
 	<div class="w3-content w3-section" >
-            <img class="mySlides" src="../a.jpg" style="width:100%; height: 400px">
-            <img class="mySlides" src="../m.jpg" style="width:100%; height: 400px">
-            <img class="mySlides" src="../s.jpg" style="width:100%; height: 400px">
-            <img class="mySlides" src="../v.jpg" style="width:100%; height: 400px;">
+            <img class="mySlides" src="a.jpg" style="width:100%; height: 400px">
+            <img class="mySlides" src="m.jpg" style="width:100%; height: 400px">
+            <img class="mySlides" src="s.jpg" style="width:100%; height: 400px">
+            <img class="mySlides" src="v.jpg" style="width:100%; height: 400px;">
         </div>
 
         <script>
@@ -241,7 +240,7 @@ else
 <!-- Portfolio Grid Section -->
 <section class="portfolio" id="portfolio">
     <div class="row">
-        <div class="col-sm-4" style="padding-left:30px;">
+        <div class="col-sm-4">
             <button type="button" class="button button1" onclick="locateUser()" name="button"> Your Position</button>
 
             <br><br>
@@ -254,431 +253,291 @@ else
 
             <br><br>
 
-	<div><b>Price</b></div>
-	<br>
-	<div class="slidecontainer">
-	<input onchange="getharga()"type="range" min="10000000" max="1000000000" value="10000000" class="slider" id="myRange1">
-	</div>
-	<div id="demo1"></div>
+            <div><b>Price</b></div>
+            <br>
+            <div class="slidecontainer">
+                <input onchange="getharga()"type="range" min="10000000" max="1000000000" value="10000000" class="slider" id="myRange1">
+            </div>
+            <div id="demo1"></div>
 
-	<br><br>
+            <br><br>
 
-	<div><b>Filter Berdasarkan :</b>
-	<br>
-	<select id="filterdata" onchange="filter()">
-	<option>Kepadatan Penduduk</option>
-	<option>Curah Hujan</option>
-	<option>Dataran rendah</option>
-	<option>Dataran Tinggi</option>
-	</select>
-	<button  type="button" class="btn btn-success" name="button" onclick="refresh()" style="background-color: #00A707; border: #1c7430; color: white;"> Refresh  </button>
-	</div>
-	<br><br>
-	<div><b>Luas Tanah</b> (m2)
-	<br>
-	<select>
-	<option><= 5.000</option>
-	<option>5.001 - 10.000</option>
-	<option>10.001 - 20.000</option>
-	<option>20.001 - 40.000</option>
-	<option>>40.000</option>
-	</select>
-	<button type="button" class="btn btn-info" name="button" onclick="tampildigitasi()"> Luas Tanah</button>
-	</div>
+            <div><b>Filter By:</b>
+                <br>
+                <select id="filterdata" onchange="filter()">
+                    <option>Kepadatan Penduduk</option>
+                    <option>Curah Hujan</option>
+                    <option>Dataran rendah</option>
+                    <option>Dataran Tinggi</option>
+                </select>
+                <button  type="button" class="button button1" name="button" onclick="refresh()"> Refresh  </button>
+            </div>
+            <br><br>
+            <div><b>Luas Tanah</b> (m2)
+                <br>
+                <select>
+                    <option><= 5.000</option>
+                    <option>5.001 - 10.000</option>
+                    <option>10.001 - 20.000</option>
+                    <option>20.001 - 40.000</option>
+                    <option>>40.000</option>
+                </select>
+                <button type="button" class="button button1" name="button" onclick="tampildigitasi()">Luas Tanah</button>
+            </div>
 
-	<br>
+            <br>
 
-	<div><b>Facility</b>
-	<br>
-	<select id="fasilitas" onchange="fasilitas()"class="form-control">
-	<option>Rumah Sakit</option>
-	<option>Halte</option>
-	<option>Masjid</option>
-	<option>Pasar</option>
-	</select>
-	</div>
-	</div>
+            <div><b>Facility</b>
+                <br>
+                <select class="form-control">
+                    <option>Rumah Sakit</option>
+                    <option>Halte</option>
+                    <option>Masjid</option>
+                    <option>Pasar</option>
+                </select>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div id="map" style="width: 750px; height: 600px; border: 1px solid #ccc"></div>
+            </div>
+
+        </div>
 	<div class="col-sm-8">
-	<div id="map" style="width: 850px; height: 600px; border: 1px solid #ccc"></div>
+		<div id="mapweather">
+              	`<?php include 'weather.php'; ?>
+		</div>
 	</div>
+        <script>
+            function refresh()
+            {
+                document.location.reload();
+            }
+        </script>
 
-	</div>
-
-	<div class="row">
-	<div class="col-sm-4">
-
-	<div class="panel panel-info">
-
-	<div class="panel-body">
-	<!-- <div id="booking" style="background-color:#ddb786; height: 600px;">
-
-	<div id="element_1">
-
-	</div>
-
-	<div id="element_2">
-	</div>
-
-	<div id="element_3">
-	</div>
-
-	<div id="element_4">
-	</div>
-
-	<div id="element_5">
-	</div>
-
-	<br>
-
-	<div id="element_6">
-	</div>
-	</div> -->
-
-	</div>
-
-
-
-	</div>
-
-
-	</div>
-	<div class="col-sm-8">
-	<div id="mapweather">
-	<?php include 'weather.php'; ?>
-	</div>
-
-	</div>
-
-	</div>
-	<script>
-	function refresh()
-	{
-	document.location.reload();
-	}
-	</script>
-
-	<script>
-	// var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-	//     osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	//     osm = L.tileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib }),
-	//     map = new L.Map('map', { center: new L.LatLng(-6.282250, 106.801443), zoom: 13 }),
-	//     drawnItems = L.featureGroup().addTo(map);
-	// L.control.layers({
-	//     'osm': osm.addTo(map),
-	//     "google": L.tileLayer('http://www.google.com/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
-	//         attribution: 'google'
-	//     })
-	// }, { 'drawlayer': drawnItems }, { position: 'topleft', collapsed: false }).addTo(map);
-	map.on('click', function(e) {
-	    // var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
-	    swal("Posisi Anda berhasil dipilih");
-	    var newMarker = new L.marker(e.latlng).addTo(map);
-	    latitude=e.latlng.lat;
-	    longitude=e.latlng.lng;
-	});
-	// map.addControl(new L.Control.Draw({
-	//     edit: {
-	//         featureGroup: drawnItems,
-	//         poly: {
-	//             allowIntersection: false
-	//         }
-	//     },
-	//     draw: {
-	//         polygon: {
-	//             allowIntersection: false,
-	//             showArea: true
-	//         }
-	//     }
-	// }));
-	map.on(L.Draw.Event.CREATED, function (event) {
-	var layer = event.layer;
-	drawnItems.addLayer(layer);
-	//Mengambil Data geometri Hasil Gambar
-	var datagambar = drawnItems.toGeoJSON();
-	//Convert ke geojson
-	convertedData = JSON.stringify(datagambar.features);
-	var length= convertedData.length;
-	var substr = convertedData.substr(80,length);
-	var hapus_belakang=substr.slice(0,-5);
-	// var replace=hapus_belakang.replace('],[','"')
-	var res = hapus_belakang.replace(/],/gi, '"');
-	var res1 = res.replace(/,/gi, ' ');
-	var res2 = res1.replace(/]/gi, ' ');
-	var res3= res2.replace(/\[/g,'');
-	res4=res3.replace(/"/g,',');
-	document.getElementById("geometry").value=res4;
-	// console.log(hapus_belakang);
-	console.log(res4);
-	});
-	</script>
+        <script>
+            // var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            //     osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            //     osm = L.tileLayer(osmUrl, { maxZoom: 18, attribution: osmAttrib }),
+            //     map = new L.Map('map', { center: new L.LatLng(-6.282250, 106.801443), zoom: 13 }),
+            //     drawnItems = L.featureGroup().addTo(map);
+            // L.control.layers({
+            //     'osm': osm.addTo(map),
+            //     "google": L.tileLayer('http://www.google.com/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
+            //         attribution: 'google'
+            //     })
+            // }, { 'drawlayer': drawnItems }, { position: 'topleft', collapsed: false }).addTo(map);
+            // map.on('click', function(e) {
+            //     // var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
+            //     swal("Posisi Anda berhasil dipilih");
+            //     var newMarker = new L.marker(e.latlng).addTo(map);
+            //     latitude=e.latlng.lat;
+            //     longitude=e.latlng.lng;
+            // });
+            // map.addControl(new L.Control.Draw({
+            //     edit: {
+            //         featureGroup: drawnItems,
+            //         poly: {
+            //             allowIntersection: false
+            //         }
+            //     },
+            //     draw: {
+            //         polygon: {
+            //             allowIntersection: false,
+            //             showArea: true
+            //         }
+            //     }
+            // }));
+            map.on(L.Draw.Event.CREATED, function (event) {
+                var layer = event.layer;
+                drawnItems.addLayer(layer);
+                //Mengambil Data geometri Hasil Gambar
+                var datagambar = drawnItems.toGeoJSON();
+                //Convert ke geojson
+                convertedData = JSON.stringify(datagambar.features);
+                var length= convertedData.length;
+                var substr = convertedData.substr(80,length);
+                var hapus_belakang=substr.slice(0,-5);
+                // var replace=hapus_belakang.replace('],[','"')
+                var res = hapus_belakang.replace(/],/gi, '"');
+                var res1 = res.replace(/,/gi, ' ');
+                var res2 = res1.replace(/]/gi, ' ');
+                var res3= res2.replace(/\[/g,'');
+                res4=res3.replace(/"/g,',');
+                document.getElementById("geometry").value=res4;
+                // console.log(hapus_belakang);
+                console.log(res4);
+            });
+        </script>
 
 
-	<script>
-	function passing_php()
-	{
-	var sertipikat=document.getElementById("id").value;
-	window.location.href = "http://localhost/magang_1/sy_proses/pr_inputbpn.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
-	}
-	</script>
-	<!-- Script untuk Filter Lahan -->
-	<script>
-	function filter()
-	{  ubah=document.getElementById('filterdata').value;
-	argeojson = <?php echo json_encode($hasil) ?>;
-	if(ubah=="Dataran rendah")
-	{
-	var poli;
-	console.log(argeojson);
-	for(var i = 0; i < argeojson.features.length; i++){
-	if (argeojson.features[i].properties.ketinggian=='Dataran Rendah' ) {
-	// console.log(argeojson.features[i].properties.gid);
-	poli=L.geoJSON(argeojson.features[i].geometry).addTo(map);
-	poli.setStyle({fillColor: '#000000'});
-	poli.setStyle({fillOpacity: 0.5});
-	poli.setStyle({color: 'none'});
-	poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info' onclick='infolahan()'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
-	}
-	else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
-	{
-	}
-	else
-	{
-	}
-	}
-	}
-	else if(ubah=="Dataran Tinggi")
-	{
-	var poli;
-	console.log(argeojson);
-	for(var i = 0; i < argeojson.features.length; i++){
-	if (argeojson.features[i].properties.ketinggian=='Dataran Rendah' ) {
-	}
-	else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
-	{
-	poli=L.geoJSON(argeojson.features[i].geometry).addTo(map);
-	poli.setStyle({fillColor: '#FF0000'});
-	poli.setStyle({fillOpacity: 0.5});
-	poli.setStyle({color: 'none'});
-	poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
-	}
-	else
-	{
-	}
-	}
-	}
-	else if(ubah=="Kepadatan Penduduk")
-	  {
-			var polygon = L.polygon([
-    [-6.102879, 106.705032],
-    [-6.152035, 106.757217],
-    [-6.239413, 106.586929]
-]).addTo(map);
-		}
-		else {
-			var polygon = L.polygon([
-		[-6.102879, 106.705032],
-		[-6.152035, 106.757217],
-		[-6.239413, 106.586929]
-]).addTo(map);
-		}
-	}
-	</script>
+        <script>
+            function passing_php()
+            {
+                var sertipikat=document.getElementById("id").value;
+                window.location.href = "http://localhost/magang_1/sy_proses/pr_inputbpn.php?geom=" + res4 + "&nosertipikat=" + sertipikat;
+            }
+        </script>
+        <!-- Script untuk Filter Lahan -->
+        <script>
+            function filter()
+            {  ubah=document.getElementById('filterdata').value;
+                argeojson = <?php echo json_encode($hasil) ?>;
+                if(ubah=="Dataran rendah")
+                {
+                    var poli;
+                    console.log(argeojson);
+                    for(var i = 0; i < argeojson.features.length; i++){
+                        if (argeojson.features[i].properties.ketinggian=='Dataran Rendah' ) {
+                            // console.log(argeojson.features[i].properties.gid);
+                            poli=L.geoJSON(argeojson.features[i].geometry).addTo(map);
+                            poli.setStyle({fillColor: '#000000'});
+                            poli.setStyle({fillOpacity: 0.5});
+                            poli.setStyle({color: 'none'});
+                            poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/> <img src='../image/example.jpg'> <br/><button class='btn btn-info' onclick='infolahan()'> Info Lahan </button> <button onclick='booking();' class='btn btn-info'>Booking</button>");
+                        }
+                        else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
+                        {
+                        }
+                        else
+                        {
+                        }
+                    }
+                }
+                else if(ubah=="Dataran Tinggi")
+                {
+                    var poli;
+                    console.log(argeojson);
+                    for(var i = 0; i < argeojson.features.length; i++){
+                        if (argeojson.features[i].properties.ketinggian=='Dataran Rendah' ) {
+                        }
+                        else if(argeojson.features[i].properties.ketinggian=='Dataran Tinggi' )
+                        {
+                            poli=L.geoJSON(argeojson.features[i].geometry).addTo(map);
+                            poli.setStyle({fillColor: '#FF0000'});
+                            poli.setStyle({fillOpacity: 0.5});
+                            poli.setStyle({color: 'none'});
+                            poli.bindPopup("<b>Info Lahan!</b><br>Disini Info Seputar Lahan<br/><img src='../image/example.jpg'> <br/><button class='btn btn-info'> Info Lahan </button> <button class='btn btn-info' onclick='booking();'>Booking</button>");
+                        }
+                        else
+                        {
+                        }
+                    }
+                }
+            }
+        </script>
 
-	<script>
-	//Verifikasi User untuk masuk menu bidding
-	function verifikasi_user()
-	{
-	var roleuser='<?php echo $_SESSION['roleuser']?>';
-	// console.log(roleuser);
-	if (roleuser=='bpn')
-	{
-	console.log('hai ini testing');
-	window.location='../pg_bidding/pencari/index.php';
-	}
-	}
-	//Fungsi untuk membooking dengan data dummies
-	// function booking()
-	// {
-	//     console.log("Button Booking di tekan");
-	//     // alert("Button Booking Ditekan!!!");
-	//     document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
-	//     document.getElementById("element_2").innerHTML="<div class='container'><table class='table'><thead><tr><th>Info</th><th>Detil</th></tr></thead><tbody><tr><td>Luas</td><td>10000 m2</td></tr><tr><td>Harga</td><td>1.000.000.000</td></tr><tr><td>July</td><td>Dooley</td></tr></tbody></table></div>";
-	//     document.getElementById("element_3").innerHTML="Dijual Oleh : Jesi Namora (Pemilik)";
-	//     document.getElementById("element_4").innerHTML="Lelang? Ya!";
-	//     document.getElementById("element_5").innerHTML="<button class='btn btn-info' onclick='bookingtanah()'> Booking </button>";
-	// 		document.getElementById("element_6").innerHTML="<button class='btn btn-info' onclick='weathershow()'> Lihat Kondisi Geografis Sekitar </button>";
-	// }
-	// function infolahan()
-	// {
-	//     document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
-	//     document.getElementById("element_2").innerHTML="<h3>Booking Tanah</h3>";
-	//     document.getElementById("element_3").innerHTML="<h3>Booking Tanah</h3>";
-	//     document.getElementById("element_4").innerHTML="<h3>Booking Tanah</h3>";
-	//     document.getElementById("element_5").innerHTML="<h3>Booking Tanah</h3>";
-	// }
-	// function bookingtanah()
-	// {
-	//     // alert("Button Booking Tanah Ditekan");
-	//     window.location = "../pg_booking/index.php";
-	// }
-	function booking()
-	{
-	swal({
-	title: "Apakah Anda Yakin?",
-	text: "Data Booking anda akan dikirimkan kepada pemilik lahan ",
-	icon: "warning",
-	buttons: true,
-	dangerMode: true,
-	})
-	.then((willDelete) => {
-	if (willDelete) {
-    swal("Selamat!! Booking anda berhasil!", {
-	icon: "success",
-    });
-	} else {
-    swal("Booking Gagal!!");
-	}
-	});
-	}
+        <script>
+            //Verifikasi User untuk masuk menu bidding
+            function verifikasi_user()
+            {
+                var roleuser='<?php echo $_SESSION['roleuser']?>';
+                // console.log(roleuser);
+                if (roleuser=='bpn')
+                {
+                    console.log('hai ini testing');
+                    window.location='../pg_bidding/pencari/index.php';
+                }
+            }
+            //Fungsi untuk membooking dengan data dummies
+            function booking()
+            {
+                console.log("Button Booking di tekan");
+                // alert("Button Booking Ditekan!!!");
+                document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
+                document.getElementById("element_2").innerHTML="<div class='container'><table class='table'><thead><tr><th>Info</th><th>Detil</th></tr></thead><tbody><tr><td>Luas</td><td>10000 m2</td></tr><tr><td>Harga</td><td>1.000.000.000</td></tr><tr><td>July</td><td>Dooley</td></tr></tbody></table></div>";
+                document.getElementById("element_3").innerHTML="Dijual Oleh : Jesi Namora (Pemilik)";
+                document.getElementById("element_4").innerHTML="Lelang? Ya!";
+                document.getElementById("element_5").innerHTML="<button class='btn btn-info' onclick='bookingtanah()'> Booking </button>";
+								document.getElementById("element_6").innerHTML="<button class='btn btn-info' onclick='weathershow()'> Lihat Kondisi Geografis Sekitar </button>";
+            }
+            function infolahan()
+            {
+                document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
+                document.getElementById("element_2").innerHTML="<h3>Booking Tanah</h3>";
+                document.getElementById("element_3").innerHTML="<h3>Booking Tanah</h3>";
+                document.getElementById("element_4").innerHTML="<h3>Booking Tanah</h3>";
+                document.getElementById("element_5").innerHTML="<h3>Booking Tanah</h3>";
+            }
+            function bookingtanah()
+            {
+                // alert("Button Booking Tanah Ditekan");
+                window.location = "../pg_booking/index.php";
+            }
+            function locateUser(){
+                map.locate({setView : true});
+                swal("Klik Dimana Posisi Anda");
+                a="1";
+            }
 
-	function infolahan()
-	{
-	swal("Info Lahan Ditampilkan Disini");
-	}
-	function locateUser(){
-	map.locate({setView : true});
-	swal("Klik Dimana Posisi Anda");
-	a="1";
-	}
-
-	function weathershow()
-	{
+						function weathershow()
+						{
 
 
-	}
-	</script>
+						}
+        </script>
 
-	<script>
-	var slider = document.getElementById("myRange");
-	var output = document.getElementById("demo");
-	output.innerHTML = slider.value; // Display the default slider value
-	// Update the current slider value (each time you drag the slider handle)
-	slider.oninput = function() {
-	output.innerHTML = this.value;
-	}
-	</script>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value; // Display the default slider value
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
 
-	<script>
-	var slider1 = document.getElementById("myRange1");
-	var output1 = document.getElementById("demo1");
-	var value=slider.value;
+        <script>
+            var slider1 = document.getElementById("myRange1");
+            var output1 = document.getElementById("demo1");
+            output1.innerHTML = slider1.value; // Display the default slider value
+            // Update the current slider value (each time you drag the slider handle)
+            slider1.oninput = function() {
+                output1.innerHTML = this.value;
+            }
+        </script>
 
-	output1.innerHTML = slider1.value; // Display the default slider value
-	// Update the current slider value (each time you drag the slider handle)
-	slider1.oninput = function() {
-	output1.innerHTML = this.value;
-	}
-	</script>
+        <script>
+            function getradius()
+            {
+                if (a=="0")
+                {
+                    swal("Pilih Posisi Anda Terlebih Dahulu!")
+                }
+                else {
+                    var radiusdata=document.getElementById("myRange").value;
+                    var circle = L.circle([latitude, longitude], {
+                        color: 'red',
+                        fillColor: '#DDB786',
+                        fillOpacity: 0.5,
+                        radius: radiusdata
+                    }).addTo(map);
+                    //Menambahkan marker disetiap radius (hardcoded)
+                    for(i=0;i<5;i++)
+                    {
+                        if(i%2==0)
+                        {latitude=latitude+0.00021;
+                            longitude=longitude+0.00021;
+                        }
+                        else {
+                            latitude=latitude+0.00042;
+                            longitude=longitude-0.00042;
+                        }
+                        var marker = L.marker([latitude, longitude]).addTo(map);
+                    }
+                }
+            }
+            function getharga()
+            {
+                swal("Tampilkan Daerah Marker sesuai harga");
+            }
+        </script>
 
-	<script>
-	function getradius()
-	{
-	if (a=="0")
-	{
-	swal("Pilih Posisi Anda Terlebih Dahulu!")
-	}
-	else {
-	var radiusdata=document.getElementById("myRange").value;
-	var circle = L.circle([latitude, longitude], {
-	color: 'red',
-	fillColor: '#DDB786',
-	fillOpacity: 0.5,
-	radius: radiusdata
-	}).addTo(map);
-	//Menambahkan marker disetiap radius (hardcoded)
-	for(i=0;i<5;i++)
-	{
-	if(i%2==0)
-	{latitude=latitude+0.00021;
-	longitude=longitude+0.00021;
-	}
-	else {
-	latitude=latitude+0.00042;
-	longitude=longitude-0.00042;
-	}
-	var marker = L.marker([latitude, longitude]).addTo(map);
-	}
-	}
-	}
-	function getharga()
-	{
-	swal("Tampilkan Daerah Marker sesuai harga");
-	}
-	</script>
-
-	<script>
-  // Membuat Random marker
-
-	function checklat()
-	{
-	a="0";
-	}
-
-	function fasilitas()
-	{
-		var fas=document.getElementById("fasilitas").value;
-		if(fas=="Rumah Sakit")
-		{
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-		else if(fas="Halte") {
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-		else if(fas="Masjid")
-		{
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-		else {
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-	}
-	</script>
+        <script>
+            function checklat()
+            {
+                a="0";
+            }
+        </script>
 
     </div>
 </section>
@@ -686,12 +545,12 @@ else
 
 
 <!-- Footer -->
-<footer class="footer text-center">
-    <div class="container" style="background-color:#b38f00;">
+<footer class="footer text-center" style="background-color:#b38f00;">
+    <div class="container" >
         <div class="row">
             <div class="col-md-4 mb-5 mb-lg-0"  >
                 <h4 class="text-uppercase mb-4"><b>Location</b></h4>
-                <p class="lead mb-0">Graha Irama lt. 6 suite A - B, Jl. H. R. Rasuna Said No.1-2, RT.6/RW.4
+                <p class="lead mb-0">Graha Irama lt. 6 suite A - B <br> Jl. H. R. Rasuna Said No.1-2, RT.6/RW.4
                     <br>Kuningan Timur, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950</p>
             </div>
             <div class="col-md-4 mb-5 mb-lg-0"  >
