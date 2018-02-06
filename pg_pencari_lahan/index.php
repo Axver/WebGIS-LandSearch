@@ -187,12 +187,12 @@ else
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav" style="background-color:#f4edbd">
-   <img class="img-responsive" style="width:170px; height:40px;" href="index.php" src="fw_bootstrap/img/3.png" alt="" >
-        <a class="navbar-brand js-scroll-trigger" href="../index.php">Lahan</a>
-        <button class="button button1" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+   <img class="img-responsive" style="width:170px; height:50px;" href="index.php" src="../fw_bootstrap/img/3.png" alt="" >
+
+        <!-- <button class="button button1" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
-        </button>
+        </button> -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mx-0 mx-lg-1">
