@@ -549,6 +549,8 @@
 	<script>
 	var slider1 = document.getElementById("myRange1");
 	var output1 = document.getElementById("demo1");
+	var value=slider.value;
+
 	output1.innerHTML = slider1.value; // Display the default slider value
 	// Update the current slider value (each time you drag the slider handle)
 	slider1.oninput = function() {
@@ -613,7 +615,7 @@
 	      }
        var markerlat=-6.230582;
 			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
     }
 		}
 		else if(fas="Halte") {
@@ -625,7 +627,7 @@
 	      }
        var markerlat=-6.230582;
 			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
     }
 		}
 		else if(fas="Masjid")
@@ -638,7 +640,7 @@
 	      }
        var markerlat=-6.230582;
 			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
     }
 		}
 		else {
@@ -650,7 +652,7 @@
 	      }
        var markerlat=-6.230582;
 			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.05), rndCoordinates(95.3,140.93,0.05)]).addTo(map);
+			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
     }
 		}
 	}
