@@ -42,9 +42,8 @@ else
    .isi{
 
 				font-size: 12px;
-				background-color: #EEE8AA;
+				background-color: #21ff00;
 				border-color: black;
-				text-transform: none;
 
 	 }
     #mapid {
@@ -200,18 +199,18 @@ position:relative
 }
 #notificationContainer
 {
-background-color:   #FFFAF0;
+background-color: #fff;
 border: 1px solid rgba(100, 100, 100, .4);
--webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
 overflow: visible;
 position: absolute;
-top: 40px;
-margin-left: -365px;
+top: 30px;
+margin-left: -170px;
 width: 400px;
 z-index: -1;
 display: none; // Enable this after jquery implementation
 }
-// Popup Arro
+// Popup Arrow
 #notificationContainer:before {
 content: '';
 display: block;
@@ -229,30 +228,25 @@ margin-left: 188px;
 font-weight: bold;
 padding: 8px;
 font-size: 13px;
-background-color: #b38f00;
+background-color: #ffffff;
 position: fixed;
 z-index: 1000;
-width: 398px;
+width: 384px;
 border-bottom: 1px solid #dddddd;
-font-family: aglet slab;
 }
 #notificationsBody
 {
 padding: 33px 0px 0px 0px !important;
 min-height:300px;
-background-color: #b38f00;
-
-
 }
 #notificationFooter
 {
-background-color: #b38f00;
+background-color: #e9eaed;
 text-align: center;
 font-weight: bold;
 padding: 8px;
 font-size: 12px;
 border-top: 1px solid #dddddd;
-width: 398px;
 }
 
 #notification_count
@@ -314,49 +308,45 @@ return false;
             <ul class="navbar-nav ml-auto">
 							<li class="nav-item mx-0 mx-lg-1">
 
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_chat/index.php">Perpesanan</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_bidding/pencari">Bidding</a>
-                </li>
+							</li>
+							<li id="notification_li">
 
-                            </li>
-
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Log Out</a>
-                </li>
-
-                <li id="notification_li">
-
-                                <span id="notification_count">3</span>
-                                <img id="notificationLink" style="width:50px; height:50px;"class="img-responsive" src="../image/notif1.png" alt="">
+								<span id="notification_count">3</span>
+								<img id="notificationLink" style="width:50px; height:50px;"class="img-responsive" src="../image/notif.png" alt="">
 <!-- <a href="#" id="notificationLink">Notifications</a> -->
 
               <div id="notificationContainer">
               <div id="notificationTitle">Notifications</div>
               <div id="notificationsBody" class="notifications">
                   <div class="isi" onclick="gobooking()">
-                   <h3><b style="text-transform: capitalize;">Informasi Booking</b></h3>
-                                     <p>Booking yang anda lakukan sedang menunggu persetujuan dari pemilik tanah</p>
-
+                   <h3><b>Informasi Booking</b></h3>
+									 <p>Booking yang anda lakukan sedang menunggu persetujuan dari pemilik tanah</p>
                   </div>
 
-                                    <div class="isi" onclick="gobooking()">
-                                     <h3><b  style="text-transform: capitalize;">Informasi Booking</b></h3>
-                                     <p>Booking Anda diterima, silahkan lihat menu transaksi!</p>
-                                    </div>
+									<div class="isi" onclick="gobooking()">
+									 <h3><b>Informasi Booking</b></h3>
+									 <p>Booking Anda diterima, silahkan lihat menu transaksi!</p>
+									</div>
 
-                                    <div class="isi" onclick="gobidding()">
-                                     <h3><b  style="text-transform: capitalize;">Informasi Bidding</b></h3>
-                                     <p>Posisi Anda bergeser!!! Bid sekarang juga!</p>
-                                    </div>
-                            </div>
+									<div class="isi" onclick="gobidding()">
+									 <h3><b>Informasi Bidding</b></h3>
+									 <p>Posisi Anda bergeser!!! Bid sekarang juga!</p>
+									</div>
+							</div>
               <div id="notificationFooter"><a href="#">See All</a></div>
              </div>
 
 
-                            </li>
+							</li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_chat/index.php">Perpesanan</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_bidding/pencari">Bidding</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Log Out</a>
+                </li>
             </ul>
         </div>
 
@@ -534,6 +524,8 @@ return false;
                 // console.log(hapus_belakang);
                 console.log(res4);
             });
+
+
         </script>
 
 
@@ -734,58 +726,59 @@ return false;
             {
                 a="0";
             }
+
 						function fasilitas()
-						{
+	          {
 		var fas=document.getElementById("fasilitas").value;
 		if(fas=="Rumah Sakit")
 		{
 			swal("Data yang ditampilkan BUKAN data Asli!")
-			 for(i=0;i<100;i++)
+       for(i=0;i<100;i++)
 			 {
 				 var rndCoordinates = function(from, to, fixed) {
-					return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-				}
-			 var markerlat=-6.230582;
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
 			 var markerlon=106.823349;
 			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-		}
+    }
 		}
 		else if(fas="Halte") {
 			swal("Data yang ditampilkan BUKAN data Asli!")
-			 for(i=0;i<100;i++)
+       for(i=0;i<100;i++)
 			 {
 				 var rndCoordinates = function(from, to, fixed) {
-					return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-				}
-			 var markerlat=-6.230582;
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
 			 var markerlon=106.823349;
 			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-		}
+    }
 		}
 		else if(fas="Masjid")
 		{
 			swal("Data yang ditampilkan BUKAN data Asli!")
-			 for(i=0;i<100;i++)
+       for(i=0;i<100;i++)
 			 {
 				 var rndCoordinates = function(from, to, fixed) {
-					return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-				}
-			 var markerlat=-6.230582;
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
 			 var markerlon=106.823349;
 			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-		}
+    }
 		}
 		else {
 			swal("Data yang ditampilkan BUKAN data Asli!")
-			 for(i=0;i<100;i++)
+       for(i=0;i<100;i++)
 			 {
 				 var rndCoordinates = function(from, to, fixed) {
-					return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-				}
-			 var markerlat=-6.230582;
+	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+	      }
+       var markerlat=-6.230582;
 			 var markerlon=106.823349;
 			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-		}
+    }
 		}
 	}
         </script>
