@@ -121,6 +121,14 @@ else
 
 <title>AndaLand</title>
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Bootstrap core CSS -->
 <link href="../fw_bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -195,6 +203,12 @@ else
         </button> -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+							<li class="nav-item mx-0 mx-lg-1">
+									<img  style="width:50px; height:50px;"class="img-responsive" src="../image/notif.png" alt="">
+									<div id="notif">
+
+									</div>
+							</li>
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_chat/index.php">Perpesanan</a>
                 </li>
@@ -313,6 +327,8 @@ else
             {
                 document.location.reload();
             }
+
+
         </script>
 
         <script>
@@ -440,25 +456,55 @@ else
                 }
             }
             //Fungsi untuk membooking dengan data dummies
-            function booking()
-            {
-                console.log("Button Booking di tekan");
-                // alert("Button Booking Ditekan!!!");
-                document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
-                document.getElementById("element_2").innerHTML="<div class='container'><table class='table'><thead><tr><th>Info</th><th>Detil</th></tr></thead><tbody><tr><td>Luas</td><td>10000 m2</td></tr><tr><td>Harga</td><td>1.000.000.000</td></tr><tr><td>July</td><td>Dooley</td></tr></tbody></table></div>";
-                document.getElementById("element_3").innerHTML="Dijual Oleh : Jesi Namora (Pemilik)";
-                document.getElementById("element_4").innerHTML="Lelang? Ya!";
-                document.getElementById("element_5").innerHTML="<button class='btn btn-info' onclick='bookingtanah()'> Booking </button>";
-								document.getElementById("element_6").innerHTML="<button class='btn btn-info' onclick='weathershow()'> Lihat Kondisi Geografis Sekitar </button>";
-            }
-            function infolahan()
-            {
-                document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
-                document.getElementById("element_2").innerHTML="<h3>Booking Tanah</h3>";
-                document.getElementById("element_3").innerHTML="<h3>Booking Tanah</h3>";
-                document.getElementById("element_4").innerHTML="<h3>Booking Tanah</h3>";
-                document.getElementById("element_5").innerHTML="<h3>Booking Tanah</h3>";
-            }
+            // function booking()
+            // {
+                // console.log("Button Booking di tekan");
+                // // alert("Button Booking Ditekan!!!");
+                // document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
+                // document.getElementById("element_2").innerHTML="<div class='container'><table class='table'><thead><tr><th>Info</th><th>Detil</th></tr></thead><tbody><tr><td>Luas</td><td>10000 m2</td></tr><tr><td>Harga</td><td>1.000.000.000</td></tr><tr><td>July</td><td>Dooley</td></tr></tbody></table></div>";
+                // document.getElementById("element_3").innerHTML="Dijual Oleh : Jesi Namora (Pemilik)";
+                // document.getElementById("element_4").innerHTML="Lelang? Ya!";
+                // document.getElementById("element_5").innerHTML="<button class='btn btn-info' onclick='bookingtanah()'> Booking </button>";
+								// document.getElementById("element_6").innerHTML="<button class='btn btn-info' onclick='weathershow()'> Lihat Kondisi Geografis Sekitar </button>";
+            // }
+            // function infolahan()
+            // {
+                // document.getElementById("element_1").innerHTML="<h3>Booking Tanah</h3>";
+                // document.getElementById("element_2").innerHTML="<h3>Booking Tanah</h3>";
+                // document.getElementById("element_3").innerHTML="<h3>Booking Tanah</h3>";
+                // document.getElementById("element_4").innerHTML="<h3>Booking Tanah</h3>";
+                // document.getElementById("element_5").innerHTML="<h3>Booking Tanah</h3>";
+            // }
+
+						function booking()
+	{
+	swal({
+	title: "Apakah Anda Yakin?",
+	text: "Data Booking anda akan dikirimkan kepada pemilik lahan ",
+	icon: "warning",
+	buttons: true,
+	dangerMode: true,
+	})
+	.then((willDelete) => {
+	if (willDelete) {
+    swal("Selamat!! Booking anda berhasil!", {
+	icon: "success",
+    });
+	} else {
+    swal("Booking Gagal!!");
+	}
+	});
+	}
+	function infolahan()
+	{
+	swal("Info Lahan Ditampilkan Disini");
+	}
+	function locateUser(){
+	map.locate({setView : true});
+	swal("Klik Dimana Posisi Anda");
+	a="1";
+	}
+
             function bookingtanah()
             {
                 // alert("Button Booking Tanah Ditekan");
