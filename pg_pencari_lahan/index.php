@@ -206,8 +206,8 @@ border: 1px solid rgba(100, 100, 100, .4);
 overflow: visible;
 position: absolute;
 top: 40px;
-margin-left: -365px;
-width: 400px;
+margin-left: -210px;
+width: 250px;
 z-index: -1;
 display: none; // Enable this after jquery implementation
 }
@@ -222,7 +222,7 @@ color: transparent;
 border: 10px solid black;
 border-color: transparent transparent white;
 margin-top: -20px;
-margin-left: 188px;
+margin-left: 300px;
 }
 #notificationTitle
 {
@@ -232,14 +232,14 @@ font-size: 13px;
 background-color: #b38f00;
 position: fixed;
 z-index: 1000;
-width: 398px;
+width: 250px;
 border-bottom: 1px solid #dddddd;
 font-family: aglet slab;
 }
 #notificationsBody
 {
 padding: 33px 0px 0px 0px !important;
-min-height:300px;
+min-height:250px;
 background-color: #b38f00;
 
 
@@ -252,7 +252,7 @@ font-weight: bold;
 padding: 8px;
 font-size: 12px;
 border-top: 1px solid #dddddd;
-width: 398px;
+width: 250px;
 }
 
 #notification_count
@@ -454,7 +454,7 @@ return false;
 
             <div><b>Facility</b>
                 <br>
-                <select id="fasilitas" onclick="fasilitas()" class="form-control">
+                <select id="fasilitas" onchange="fasilitas()" class="form-control">
                     <option>Rumah Sakit</option>
                     <option>Halte</option>
                     <option>Masjid</option>
