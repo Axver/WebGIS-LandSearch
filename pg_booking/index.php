@@ -95,7 +95,7 @@
 </header>
 
 <!-- Portfolio Grid Section -->
-<section style="margin-left:200px; margin-top:100px;"class="portfolio" id="portfolio">
+<section style="margin-left:20px; margin-top:100px;"class="portfolio" id="portfolio">
 	<div class="container">
 
 		<div class="daftarbooking">
@@ -109,23 +109,31 @@
 <th>No Sertipikat</th>
 <th>Status</th>
 <th>Cari Notaris</th>
+<th>Posisi BID</th>
+<th>Time</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0000000001</td>
-<td>Belum Disetuji</td>
+<td>Belum Disetujui</td>
 <td><button class="btn btn-danger"disabled>Cari Notaris </button></td>
+<td><img style="width:50px; height:50px; margin-left:5px;" src="../image/3.png"></td>
+<td>2 hours left</td>
 </tr>
 <tr>
 <td>0000000002</td>
 <td>Belum Disetujui</td>
 <td><button class="btn btn-danger"disabled>Cari Notaris </button></td>
+<td><img style="width:50px; height:50px; margin-left:5px;" src="../image/2.png"></td>
+<td>2 hours left</td>
 </tr>
 <tr>
 <td>0000000003</td>
 <td>Sudah Disetuji</td>
-<td><button class="btn btn-info" onclick="carinotaris()">Cari Notaris </button></td>
+<td><button class="btn btn-info" onclick="carinotaris()">Cari Notaris </td>
+	<td></button> <img style="width:50px; height:50px;" src="../image/win.png"></td>
+	<td>Finish</td>
 </tr>
 </tbody>
 </table>
@@ -645,8 +653,9 @@
 
 							function carinotaris()
 							{
-								swal("Menampilkan daftar notaris");
+
 								myFunction();
+									swal("Menampilkan daftar notaris");
 							}
 
 							function myFunction() {
