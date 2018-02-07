@@ -1,8 +1,8 @@
 <?php
-	
+
 	session_start();
 	if (!isset($_SESSION['username'])){
-		
+
 		echo "<script> alert('Anda Harus Log In Terlebih Dahulu!!'); window.location = '../index.php'; </script>";
 		// header("Location:../index.php");
 	}
@@ -13,59 +13,61 @@
 			header("Location: ../index.php");
 		}
 	}
-	
-	
+
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
-	
-	
-	
+
+
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	
+
 	<title>AndaLand</title>
-	
+	<!-- Sweetalert -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 	<!-- Grid Galerry Component -->
 	<link rel="shortcut icon" href="../plugin_gallery/GridGallery/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../plugin_gallery/GridGallery/css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="../plugin_gallery/GridGallery/css/component.css" />
 	<script src="../plugin_gallery/GridGallery/js/modernizr.custom.js"></script>
-	
+
 	<!-- Bootstrap core CSS -->
 	<link href="../fw_bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	
+
 	<!-- Custom fonts for this template -->
 	<link href="../fw_bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-	
+
 	<!-- Plugin CSS -->
 	<link href="../fw_bootstrap/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-	
+
 	<!-- Custom styles for this template -->
 	<link href="../fw_bootstrap/css/freelancer.min.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- Image slide -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<style>
 		.mySlides {display:none;}
 	</style>
-	
+
 	<script src="../fw_bootstrap/vendor/jquery/jquery.min.js"></script>
-	
+
 </head>
 <body>
 </head>
 
 
-<body id="page-top" style="background-color:#ffffe6;">
-	
+<body onload="myFunction()"id="page-top" style="background-color:#ffffe6;">
+
 	<!-- Navigation -->
 	<nav style="background-color:#f4edbd; height:70px;" class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
 		<img class="img-responsive" style="width:200px; height:100px;" href="index.php" src="../fw_bootstrap/img/3.png" alt="" >
@@ -95,9 +97,45 @@
 <!-- Portfolio Grid Section -->
 <section style="margin-left:200px; margin-top:100px;"class="portfolio" id="portfolio">
 	<div class="container">
-		
-		
-		<div class="container">
+
+		<div class="daftarbooking">
+
+			<div class="container">
+<h2>Daftar Bookingf</h2>
+
+<table class="table">
+<thead>
+<tr>
+<th>No Sertipikat</th>
+<th>Status</th>
+<th>Cari Notaris</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0000000001</td>
+<td>Belum Disetuji</td>
+<td><button class="btn btn-danger"disabled>Cari Notaris </button></td>
+</tr>
+<tr>
+<td>0000000002</td>
+<td>Belum Disetujui</td>
+<td><button class="btn btn-danger"disabled>Cari Notaris </button></td>
+</tr>
+<tr>
+<td>0000000003</td>
+<td>Sudah Disetuji</td>
+<td><button class="btn btn-info" onclick="carinotaris()">Cari Notaris </button></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+		</div>
+
+<div id="gallery">
+
+		<div id="gallery-saya" class="container">
 			<div class="filter_notaris" style="height:100px;">
 				Cari Notaris: <input type="text" name="" value="">
 			</div>
@@ -496,7 +534,9 @@
 							</section><!-- // slideshow -->
 							</div><!-- // grid-gallery -->
 							</div>
-							
+
+						</div>
+
 							<script src="../plugin_gallery/GridGallery/js/imagesloaded.pkgd.min.js"></script>
 							<script src="../plugin_gallery/GridGallery/js/masonry.pkgd.min.js"></script>
 							<script src="../plugin_gallery/GridGallery/js/classie.js"></script>
@@ -504,21 +544,21 @@
 							<script>
 							new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
 							</script>
-							
-							
+
+
 							</div>
-							
-							
-							
-							
-							
-							
-							
+
+
+
+
+
+
+
 							</div>
 							</section>
-							
-							
-							
+
+
+
 							<!-- Footer -->
 							<!-- <footer style="background-color:#664d00;" class="footer text-center">
 							<div class="container">
@@ -566,43 +606,60 @@
 							</div>
 							</div>
 							</footer> -->
-							
+
 							<div class="copyright py-4 text-center text-white">
 							<div class="container">
 							<small>Copyright &copy; Your Website 2017</small>
 							</div>
 							</div>
-							
+
 							<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 							<div class="scroll-to-top d-lg-none position-fixed ">
 							<a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
 							<i class="fa fa-chevron-up"></i>
 							</a>
 							</div>
-							
-							
-							
+
+
+
 							<!-- Bootstrap core JavaScript -->
-							
+
 							<script src="../fw_bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-							
+
 							<!-- Plugin JavaScript -->
-							
-							
-							
+
+
+
 							<script src="../fw_bootstrap/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-							
+
 							<!-- Contact Form JavaScript -->
 							<script src="../fw_bootstrap/js/jqBootstrapValidation.js"></script>
 							<script src="../fw_bootstrap/js/contact_me.js"></script>
-							
+
 							<!-- Custom scripts for this template -->
 							<script src="../fw_bootstrap/js/freelancer.min.js"></script>
-							
-							
-							
-							
+							<script>
+
+							function carinotaris()
+							{
+								swal("Menampilkan daftar notaris");
+								myFunction();
+							}
+
+							function myFunction() {
+              var x = document.getElementById("gallery");
+              if (x.style.display === "none") {
+              x.style.display = "block";
+               } else {
+              x.style.display = "none";
+            }
+          }
+
+							</script>
+
+
+
+
 							</body>
-							
+
 							</html>
-														

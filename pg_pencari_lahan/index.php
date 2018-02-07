@@ -39,6 +39,13 @@ else
 <!-- Make sure you put this AFTER Leaflet's CSS -->
 <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js" integrity="sha512-C7BBF9irt5R7hqbUm2uxtODlUVs+IsNu2UULGuZN7gM+k/mmeG4xvIEac01BtQa4YIkUpp23zZC4wIwuXaPMQA==" crossorigin=""></script>
 <style>
+   .isi{
+
+				font-size: 12px;
+				background-color: #21ff00;
+				border-color: black;
+
+	 }
     #mapid {
         height: 600px;
     }
@@ -311,6 +318,20 @@ return false;
               <div id="notificationContainer">
               <div id="notificationTitle">Notifications</div>
               <div id="notificationsBody" class="notifications">
+                  <div class="isi" onclick="gobooking()">
+                   <h3><b>Informasi Booking</b></h3>
+									 <p>Booking yang anda lakukan sedang menunggu persetujuan dari pemilik tanah</p>
+                  </div>
+
+									<div class="isi" onclick="gobooking()">
+									 <h3><b>Informasi Booking</b></h3>
+									 <p>Booking Anda diterima, silahkan lihat menu transaksi!</p>
+									</div>
+
+									<div class="isi" onclick="gobidding()">
+									 <h3><b>Informasi Bidding</b></h3>
+									 <p>Posisi Anda bergeser!!! Bid sekarang juga!</p>
+									</div>
 							</div>
               <div id="notificationFooter"><a href="#">See All</a></div>
              </div>
@@ -342,6 +363,17 @@ return false;
         </div>
 
         <script>
+
+				function gobooking()
+				   {
+						 swal("Meredirect Ke Halaman Booking");
+						 window.location="../pg_booking/index.php";
+					 }
+
+					 function gobidding()
+					 {
+						 swal("Meredirect Ke Halaman Bidding");
+					 }
             var myIndex = 0;
             carousel();
 
