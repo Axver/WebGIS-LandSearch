@@ -66,7 +66,7 @@
 </head>
 
 
-<body onload="myFunction()"id="page-top" style="background-color:#ffffe6;">
+<body onload="myFunction()" id="page-top" style="background-color:#ffffe6;">
 
 	<!-- Navigation -->
 	<nav style="background-color:#f4edbd; height:70px;" class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -101,7 +101,7 @@
 		<div class="daftarbooking">
 
 			<div class="container">
-<h2>Daftar Bookingf</h2>
+<h2>Daftar Booking</h2>
 
 <table class="table">
 <thead>
@@ -133,11 +133,12 @@
 
 		</div>
 
-<div id="gallery">
+<div id="gallery" onload="hilang()">
 
 		<div id="gallery-saya" class="container">
 			<div class="filter_notaris" style="height:100px;">
 				Cari Notaris: <input type="text" name="" value="">
+				<button onclick="tampilnotaris()" type="button" class="btn btn-info" name="button">Lihat Semua Notaris</button>
 			</div>
 			<div id="grid-gallery" class="grid-gallery">
 				<section class="grid-wrap">
@@ -543,6 +544,7 @@
 							<script src="../plugin_gallery/GridGallery/js/cbpGridGallery.js"></script>
 							<script>
 							new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+
 							</script>
 
 
@@ -622,6 +624,7 @@
 
 
 
+
 							<!-- Bootstrap core JavaScript -->
 
 							<script src="../fw_bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -654,6 +657,13 @@
               x.style.display = "none";
             }
           }
+
+					function tampilnotaris()
+					{
+           swal("Fungsi Jalan");
+					 document.getElementById('gallery').style.width = "800px"
+
+					}
 
 							</script>
 
