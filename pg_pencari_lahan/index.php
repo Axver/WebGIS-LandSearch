@@ -199,18 +199,18 @@ position:relative
 }
 #notificationContainer
 {
-background-color: #fff;
+background-color:   #FFFAF0;
 border: 1px solid rgba(100, 100, 100, .4);
--webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
 overflow: visible;
 position: absolute;
-top: 30px;
-margin-left: -170px;
+top: 40px;
+margin-left: -365px;
 width: 400px;
 z-index: -1;
 display: none; // Enable this after jquery implementation
 }
-// Popup Arrow
+// Popup Arro
 #notificationContainer:before {
 content: '';
 display: block;
@@ -228,25 +228,29 @@ margin-left: 188px;
 font-weight: bold;
 padding: 8px;
 font-size: 13px;
-background-color: #ffffff;
+background-color: #b38f00;
 position: fixed;
 z-index: 1000;
-width: 384px;
+width: 398px;
 border-bottom: 1px solid #dddddd;
+font-family: aglet slab;
 }
 #notificationsBody
 {
 padding: 33px 0px 0px 0px !important;
 min-height:300px;
+background-color: #ffffff;
+
 }
 #notificationFooter
 {
-background-color: #e9eaed;
+background-color: #b38f00;
 text-align: center;
 font-weight: bold;
 padding: 8px;
 font-size: 12px;
 border-top: 1px solid #dddddd;
+width: 398px;
 }
 
 #notification_count
@@ -263,6 +267,7 @@ position: absolute;
 margin-top: -11px;
 font-size: 11px;
 }
+
         </style>
 
 				<script>
@@ -312,7 +317,7 @@ return false;
 							<li id="notification_li">
 
 								<span id="notification_count">3</span>
-								<img id="notificationLink" style="width:50px; height:50px;"class="img-responsive" src="../image/notif.png" alt="">
+								<img id="notificationLink" style="width:50px; height:50px;"class="img-responsive" src="../image/notif1.png" alt="">
 <!-- <a href="#" id="notificationLink">Notifications</a> -->
 
               <div id="notificationContainer">
@@ -444,7 +449,7 @@ return false;
 
             <div><b>Facility</b>
                 <br>
-                <select id="fasilitas" onclick="fasilitas()" class="form-control">
+                <select class="form-control">
                     <option>Rumah Sakit</option>
                     <option>Halte</option>
                     <option>Masjid</option>
@@ -524,8 +529,6 @@ return false;
                 // console.log(hapus_belakang);
                 console.log(res4);
             });
-
-
         </script>
 
 
@@ -726,61 +729,6 @@ return false;
             {
                 a="0";
             }
-
-						function fasilitas()
-	          {
-		var fas=document.getElementById("fasilitas").value;
-		if(fas=="Rumah Sakit")
-		{
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-		else if(fas="Halte") {
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-		else if(fas="Masjid")
-		{
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-		else {
-			swal("Data yang ditampilkan BUKAN data Asli!")
-       for(i=0;i<100;i++)
-			 {
-				 var rndCoordinates = function(from, to, fixed) {
-	        return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-	      }
-       var markerlat=-6.230582;
-			 var markerlon=106.823349;
-			 var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-    }
-		}
-	}
         </script>
 
     </div>
