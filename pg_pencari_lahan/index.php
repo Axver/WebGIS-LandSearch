@@ -186,8 +186,104 @@ else
                 background-color: #b38f00;
                 color: white;
             }
+						#notification_li
+{
+position:relative
+}
+#notificationContainer
+{
+background-color: #fff;
+border: 1px solid rgba(100, 100, 100, .4);
+-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+overflow: visible;
+position: absolute;
+top: 30px;
+margin-left: -170px;
+width: 400px;
+z-index: -1;
+display: none; // Enable this after jquery implementation
+}
+// Popup Arrow
+#notificationContainer:before {
+content: '';
+display: block;
+position: absolute;
+width: 0;
+height: 0;
+color: transparent;
+border: 10px solid black;
+border-color: transparent transparent white;
+margin-top: -20px;
+margin-left: 188px;
+}
+#notificationTitle
+{
+font-weight: bold;
+padding: 8px;
+font-size: 13px;
+background-color: #ffffff;
+position: fixed;
+z-index: 1000;
+width: 384px;
+border-bottom: 1px solid #dddddd;
+}
+#notificationsBody
+{
+padding: 33px 0px 0px 0px !important;
+min-height:300px;
+}
+#notificationFooter
+{
+background-color: #e9eaed;
+text-align: center;
+font-weight: bold;
+padding: 8px;
+font-size: 12px;
+border-top: 1px solid #dddddd;
+}
 
+#notification_count
+{
+padding: 3px 7px 3px 7px;
+background: #cc0000;
+color: #ffffff;
+font-weight: bold;
+margin-left: 30px;
+border-radius: 9px;
+-moz-border-radius: 9px;
+-webkit-border-radius: 9px;
+position: absolute;
+margin-top: -11px;
+font-size: 11px;
+}
         </style>
+
+				<script>
+
+				$(document).ready(function()
+{
+$("#notificationLink").click(function()
+{
+$("#notificationContainer").fadeToggle(300);
+$("#notification_count").fadeOut("slow");
+return false;
+});
+
+//Document Click hiding the popup
+$(document).click(function()
+{
+$("#notificationContainer").hide();
+});
+
+//Popup on click
+$("#notificationContainer").click(function()
+{
+return false;
+});
+
+});
+
+				</script>
 
 </head>
 
@@ -204,10 +300,22 @@ else
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
 							<li class="nav-item mx-0 mx-lg-1">
-									<img  style="width:50px; height:50px;"class="img-responsive" src="../image/notif.png" alt="">
-									<div id="notif">
 
-									</div>
+							</li>
+							<li id="notification_li">
+
+								<span id="notification_count">3</span>
+								<img id="notificationLink" style="width:50px; height:50px;"class="img-responsive" src="../image/notif.png" alt="">
+<!-- <a href="#" id="notificationLink">Notifications</a> -->
+
+              <div id="notificationContainer">
+              <div id="notificationTitle">Notifications</div>
+              <div id="notificationsBody" class="notifications">
+							</div>
+              <div id="notificationFooter"><a href="#">See All</a></div>
+             </div>
+
+
 							</li>
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../pg_chat/index.php">Perpesanan</a>
