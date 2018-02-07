@@ -60,6 +60,19 @@
 	</style>
 
 	<script src="../fw_bootstrap/vendor/jquery/jquery.min.js"></script>
+	<script>
+
+	function biddingpage()
+	{
+		swal("Last Bid: Rp.100.000.000","Enter your bid", {
+    content: "input",
+    })
+    .then((value) => {
+    swal(`Anda Bid: ${value}`);
+   });
+	}
+
+	</script>
 
 </head>
 <body>
@@ -118,14 +131,14 @@
 <td>0000000001</td>
 <td>Belum Disetujui</td>
 <td><button class="btn btn-danger"disabled>Cari Notaris </button></td>
-<td><img style="width:50px; height:50px; margin-left:5px;" src="../image/3.png"></td>
+<td><img style="width:50px; height:50px; margin-left:5px;" src="../image/3.png"> <button onclick="biddingpage()" class="btn btn-warning">BID NOW </button></td>
 <td>2 hours left</td>
 </tr>
 <tr>
 <td>0000000002</td>
 <td>Belum Disetujui</td>
 <td><button class="btn btn-danger"disabled>Cari Notaris </button></td>
-<td><img style="width:50px; height:50px; margin-left:5px;" src="../image/2.png"></td>
+<td><img style="width:50px; height:50px; margin-left:5px;" src="../image/2.png"> <button onclick="biddingpage()" class="btn btn-warning">BID NOW </button></td>
 <td>2 hours left</td>
 </tr>
 <tr>

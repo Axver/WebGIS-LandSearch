@@ -3,12 +3,12 @@
 session_start();
 if(isset($_SESSION['username']))
    {
-      if ($_SESSION['username']=='user')
+      if ($_SESSION['username']=='pemilik')
       {
-            header("Location:../pencari/index.php");
+        //Do nothing
       }
-      else if($_SESSION['username']=='pemilik') {
-            //Do Nothing
+      else if($_SESSION['username']=='user') {
+            header("Location:../pemilik/index.php");
       }
    }
 else {
@@ -17,6 +17,7 @@ else {
 
 
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,7 @@ else {
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="hidden()">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -67,13 +68,13 @@ else {
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../pg_chat/index.php">Perpesanan</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../index.php">Home</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../sy_proses/pr_logout.php">Log Out</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../../sy_proses/pr_logout.php">Log Out</a>
           </li>
         </ul>
       </div>
@@ -83,20 +84,59 @@ else {
   <!-- Header -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container">
-      <h1 class="text-uppercase mb-0">Menu Maps Disini</h1>
-      <hr class="star-light">
-      <h2 class="font-weight-light mb-0">Temukan Lahan Potensial Sesuai Kebutuhan Anda</h2>
+      <h1 class="text-uppercase mb-0">Lelang yang anda ikuti</h1>
+
     </div>
   </header>
 
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <h2 class="text-center text-uppercase text-secondary mb-0">GIS LAHAN</h2>
-      <hr class="star-dark mb-5">
+
+      <h2>Bidding List:</h2>
+      <p>Untuk tanah : no.100.19.888.118</p>
+      <h3>Info Bidding</h3>
+      <p>
+      <h6>Open Bid : 1000.000.000</h6>
+      <h6>Bid: 10.000.000</h6>
+      <h6>Batas: xx jam xx menit</h6>
+      </p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Bid</th>
+            <th>Waktu</th>
+            <th>Posisi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>1.010.000.000</td>
+            <td>12:00:01</td>
+            <td><img style="width:50px; height:50px;" src="../../image/3.png"></td>
+          </tr>
+          <tr>
+            <td>Mary</td>
+            <td>1.050.000.000</td>
+            <td>13:00:00</td>
+            <td><img style="width:50px; height:50px;" src="../../image/2.png"></td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>2.000.000.000</td>
+            <td>14:00:00</td>
+            <td><img style="width:50px; height:50px;" src="../../image/1.png"><img style="width:50px; height:50px;" src="../../image/piala.png"></td>
+          </tr>
+        </tbody>
+      </table>
+
 
 
     </div>
+
+
   </section>
 
   <footer class="footer text-center">
@@ -174,6 +214,10 @@ else {
 
   <!-- Custom scripts for this template -->
   <script src="../../fw_bootstrap/js/freelancer.min.js"></script>
+  <script>
+
+
+  </script>
 
 </body>
 

@@ -52,10 +52,18 @@ else {
 
   <!-- Custom styles for this template -->
   <link href="../../fw_bootstrap/css/freelancer.min.css" rel="stylesheet">
+  <script>
+
+  function alihkan()
+    {
+      window.location="../../pg_booking/index.php";
+    }
+
+  </script>
 
 </head>
 
-<body id="page-top" onload="hidden()">
+<body id="page-top" onload="alihkan()">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
