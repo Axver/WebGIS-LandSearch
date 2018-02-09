@@ -2,7 +2,6 @@
 
 	include 'sy_proses/pr_getdatabpn.php';
 
-
 	session_start();
 	if(isset($_SESSION['username']))
 	{
@@ -137,7 +136,7 @@ swal("Warning!!","Anda harus Login terlebih dahulu untuk menggunakan menu ini");
 </head>
 
 
-<body onload="checklat()"id="page-top" style="background-color:#ffffe6;">
+<body id="page-top" style="background-color:#ffffe6;">
 
 <!-- Navigation -->
 <nav style="background-color:#f4edbd;" class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -186,111 +185,6 @@ if (myIndex > x.length) {myIndex = 1}
 x[myIndex-1].style.display = "block";
 setTimeout(carousel, 10000); // Change image every 2 seconds
 }
-
-function locateUser(){
-map.locate({setView : true});
-swal("Klik Dimana Posisi Anda");
-a="1";
-}
-
-function getradius()
-{
-		if (a=="0")
-		{
-				swal("Pilih Posisi Anda Terlebih Dahulu!")
-		}
-		else {
-				var radiusdata=document.getElementById("myRange").value;
-				var circle = L.circle([latitude, longitude], {
-						color: 'red',
-						fillColor: '#DDB786',
-						fillOpacity: 0.5,
-						radius: radiusdata
-				}).addTo(map);
-				//Menambahkan marker disetiap radius (hardcoded)
-				for(i=0;i<5;i++)
-				{
-						if(i%2==0)
-						{latitude=latitude+0.00021;
-								longitude=longitude+0.00021;
-						}
-						else {
-								latitude=latitude+0.00042;
-								longitude=longitude-0.00042;
-						}
-						var marker = L.marker([latitude, longitude]).addTo(map);
-				}
-		}
-}
-function getharga()
-{
-		swal("Tampilkan Daerah Marker sesuai harga");
-}
-function getharga()
-{
-		swal("Tampilkan Daerah Marker sesuai harga");
-}
-function checklat()
-{
-		a="0";
-}
-
-function fasilitas()
-{
-var fas=document.getElementById("fasilitas").value;
-if(fas=="Rumah Sakit")
-{
-swal("Data yang ditampilkan BUKAN data Asli!")
-for(i=0;i<100;i++)
-{
-var rndCoordinates = function(from, to, fixed) {
-return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-}
-var markerlat=-6.230582;
-var markerlon=106.823349;
-var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-}
-}
-else if(fas="Halte") {
-swal("Data yang ditampilkan BUKAN data Asli!")
-for(i=0;i<100;i++)
-{
-var rndCoordinates = function(from, to, fixed) {
-return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-}
-var markerlat=-6.230582;
-var markerlon=106.823349;
-var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-}
-}
-else if(fas="Masjid")
-{
-swal("Data yang ditampilkan BUKAN data Asli!")
-for(i=0;i<100;i++)
-{
-var rndCoordinates = function(from, to, fixed) {
-return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-}
-var markerlat=-6.230582;
-var markerlon=106.823349;
-var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-}
-}
-else {
-swal("Data yang ditampilkan BUKAN data Asli!")
-for(i=0;i<100;i++)
-{
-var rndCoordinates = function(from, to, fixed) {
-return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-}
-var markerlat=-6.230582;
-var markerlon=106.823349;
-var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140.93,0.000002)]).addTo(map);
-}
-}
-}
-
-
 </script>
 </div>
 
@@ -298,71 +192,64 @@ var marker = L.marker([rndCoordinates(5.3,-5.9,0.00002), rndCoordinates(95.3,140
 </header>
 
 <!-- Portfolio Grid Section -->
-<section style="margin-left:20px;"class="portfolio" id="portfolio">
-	<div class="row">
-			<div class="col-sm-4" style="padding-left:30px;">
-					<button type="button" class="button button1" onclick="locateUser()" name="button"> Your Position</button>
+<section style="margin-left:200px;"class="portfolio" id="portfolio">
+<div class="container">
 
-					<br><br>
+<select id="filterdata" onchange="filter()">
+<option>
+Kepadatan Penduduk
+</option>
+<option>
+Curah Hujan
+</option>
 
-					<div><b>Radius</b></div>
-					<div class="slidecontainer">
-							<input onchange="getradius()" type="range" min="1" max="1000" value="1" class="slider" id="myRange">
-					</div>
-					<div id="demo"></div><div>meter</div>
+<option>
+Dataran rendah
+</option>
 
-					<br><br>
+<option>
+Dataran Tinggi
+</option>
+</select>
+<button  type="button" class="btn btn-success" name="button" onclick="refresh()"> Refresh  </button>
+<button type="button" class="btn btn-info" name="button" onclick="tampildigitasi()"> Luas (m2)</button>
+<select>
+<option>
+<=5000
+</option>
+<option>
+5001-10000
+</option>
+10001-20000
+<option>
+20000-40000
+</option>
 
-					<div><b>Price</b></div>
-					<br>
-					<div class="slidecontainer">
-							<input onchange="getharga()"type="range" min="10000000" max="1000000000" value="10000000" class="slider" id="myRange1">
-					</div>
-					<div id="demo1"></div>
+<option>
+>40000
+</option>
+</select>
+<div class="row">
+<div class="col-sm-8">
+<div id="map" style=" width: 900px; height: 600px; border: 1px solid #ccc"></div>
+</div>
+<div class="col-sm-4">
 
-					<br><br>
+<div class="panel panel-info">
 
-					<div><b>Filter By:</b>
-							<br>
-							<select id="filterdata" onchange="filter()">
-									<option>Kepadatan Penduduk</option>
-									<option>Curah Hujan</option>
-									<option>Dataran rendah</option>
-									<option>Dataran Tinggi</option>
-							</select>
-							<button  type="button" class="button button1" name="button" onclick="refresh()"> Refresh  </button>
-					</div>
-					<br><br>
-					<div><b>Luas Tanah</b> (m2)
-							<br>
-							<select>
-									<option><= 5.000</option>
-									<option>5.001 - 10.000</option>
-									<option>10.001 - 20.000</option>
-									<option>20.001 - 40.000</option>
-									<option>>40.000</option>
-							</select>
-							<button type="button" class="button button1" name="button" onclick="tampildigitasi()">Luas Tanah</button>
-					</div>
+<div id="tampillogin" class="panel-body">
 
-					<br>
+</div>
 
-					<div><b>Facility</b>
-							<br>
-							<select id="fasilitas" onclick="fasilitas()" class="form-control">
-									<option>Rumah Sakit</option>
-									<option>Halte</option>
-									<option>Masjid</option>
-									<option>Pasar</option>
-							</select>
-					</div>
-			</div>
-					<div class="col-sm-8">
-							<div id="map" style="width: 850px; height: 600px; border: 1px solid #ccc"></div>
-					</div>
+</div>
 
-			</div>
 
+
+</div>
+
+
+</div>
+</div>
 <script>
 function refresh()
 {
@@ -396,13 +283,6 @@ attribution: 'google'
 //         }
 //     }
 // }));
-map.on('click', function(e) {
-		// var marker = L.marker([e.latlng.lat, e.latlng.lat]).addTo(map);
-		swal("Posisi Anda berhasil dipilih");
-		var newMarker = new L.marker(e.latlng).addTo(map);
-		latitude=e.latlng.lat;
-		longitude=e.latlng.lng;
-});
 map.on(L.Draw.Event.CREATED, function (event) {
 var layer = event.layer;
 drawnItems.addLayer(layer);
