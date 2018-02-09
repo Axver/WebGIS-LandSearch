@@ -394,7 +394,7 @@ swal("Warning!!","Anda harus Login terlebih dahulu untuk menggunakan menu ini");
 
                         <div><b>Facility</b>
                                 <br>
-                                <select id="fasilitas" onclick="fasilitas()" class="form-control">
+                                <select id="fasilitas" onchange="fasilitas()" class="form-control">
                                         <option>Hospital</option>
                                         <option>Bus Station</option>
                                         <option>Mosque</option>
