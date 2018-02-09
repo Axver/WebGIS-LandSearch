@@ -143,7 +143,7 @@
 </tr>
 <tr>
 <td>0000000003</td>
-<td>Sudah Disetuji</td>
+<td>Sudah Disetujui</td>
 <td><button class="btn btn-info" onclick="carinotaris()">Cari Notaris </td>
 	<td></button> <img style="width:50px; height:50px;" src="../image/win.png"></td>
 	<td>Finish</td>
