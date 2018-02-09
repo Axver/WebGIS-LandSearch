@@ -178,7 +178,7 @@ swal("Warning!!","Anda harus Login terlebih dahulu untuk menggunakan menu ini");
 
     <!-- Navigation -->
     <nav style="background-color:#f4edbd;" class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-        <img class="img-responsive" style="width:200px; height:100px;" href="index.php" src="fw_bootstrap/img/3.png" alt="" >
+        <img class="img-responsive" style="width:200px; height:100px;" href="index.php" src="image/1 (3).png" alt="" >
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
