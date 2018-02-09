@@ -304,7 +304,7 @@ return false;
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav" style="background-color:#f4edbd">
-   <img class="img-responsive" style="width:170px; height:50px;" href="index.php" src="../fw_bootstrap/img/3.png" alt="" >
+   <img class="img-responsive" style="width:170px; height:50px;" href="index.php" src="../image/1 (3).png" alt="" >
 
         <!-- <button class="button button1" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
